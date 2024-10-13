@@ -1,0 +1,11 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../../../../Downloads/Prueba placa/Prueba placa/fifo/Nexys_RS232.vhd" \
+"../../../../../../../../Downloads/Prueba placa/Prueba placa/fifo/RS232top.vhd" \
+"../../../../../../../../Downloads/Prueba placa/Prueba placa/fifo/fifo.srcs/sources_1/new/rrx.vhd" \
+"../../../../../../../../Downloads/Prueba placa/Prueba placa/fifo/fifo.srcs/sources_1/new/shiftregister.vhd" \
+"../../../../../../../../Downloads/Prueba placa/Prueba placa/fifo/fifo.srcs/sources_1/new/trx.vhd" \
+"../../../../../../../../Downloads/Prueba placa/Prueba placa/fifo/tb_nexys_RS232.vhd" \
+
+# Do not sort compile order
+nosort

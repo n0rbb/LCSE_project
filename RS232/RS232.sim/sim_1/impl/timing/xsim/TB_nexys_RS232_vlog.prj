@@ -1,0 +1,6 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../RS232.ip_user_files/ipstatic" \
+"TB_nexys_RS232_time_impl.v" \
+
+# Do not sort compile order
+nosort
