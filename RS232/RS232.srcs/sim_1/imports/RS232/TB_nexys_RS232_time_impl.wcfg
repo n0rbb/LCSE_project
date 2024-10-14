@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="TB_nexys_RS232_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="TB_nexys_RS232" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
+      <ZoomEndTime time="500.000001 us"></ZoomEndTime>
+      <Cursor1Time time="80.618893 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="561"></NameColumnWidth>
+      <ValueColumnWidth column_width="190"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="32" />
+   <wvobject type="divider" fp_name="divider30">
+      <obj_property name="label">Clock</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_nexys_RS232/Clk100MHz" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">Clk100MHz</obj_property>
+      <obj_property name="ObjectShortName">Clk100MHz</obj_property>
+      <obj_property name="label">Clk 100 MHz</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_nexys_RS232/Unit_nexys_RS232/clk_20MHz/clk_out1" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">clk_out1</obj_property>
+      <obj_property name="ObjectShortName">clk_out1</obj_property>
+      <obj_property name="label">Clk   20 MHz</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider31">
+      <obj_property name="label">Input</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_nexys_RS232/Unit_nexys_RS232/UUT/Reset" type="logic">
+      <obj_property name="ElementShortName">Reset</obj_property>
+      <obj_property name="ObjectShortName">Reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_nexys_RS232/Unit_nexys_RS232/UUT/Valid_D" type="logic">
+      <obj_property name="ElementShortName">Valid_D</obj_property>
+      <obj_property name="ObjectShortName">Valid_D</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_nexys_RS232/Unit_nexys_RS232/UUT/StartTX" type="logic">
+      <obj_property name="ElementShortName">StartTX</obj_property>
+      <obj_property name="ObjectShortName">StartTX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_nexys_RS232/Data_in" type="array">
+      <obj_property name="ElementShortName">Data_in[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Data_in[7:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider33">
+      <obj_property name="label">Transmitter</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="group82" type="group">
+      <obj_property name="label">FSM</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/TB_nexys_RS232/Unit_nexys_RS232/UUT/Transmitter/next_state" type="other">
+         <obj_property name="ElementShortName">next_state</obj_property>
+         <obj_property name="ObjectShortName">next_state</obj_property>
+         <obj_property name="CustomSignalColor">#E0FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_nexys_RS232/Unit_nexys_RS232/UUT/Transmitter/current_state" type="other">
+         <obj_property name="ElementShortName">current_state</obj_property>
+         <obj_property name="ObjectShortName">current_state</obj_property>
+         <obj_property name="CustomSignalColor">#E0FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group46" type="group">
+      <obj_property name="label">Counters</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/TB_nexys_RS232/Unit_nexys_RS232/UUT/Transmitter/Pulse_width" type="array">
+         <obj_property name="ElementShortName">Pulse_width[7:0]</obj_property>
+         <obj_property name="ObjectShortName">Pulse_width[7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#E0FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_nexys_RS232/Unit_nexys_RS232/UUT/Transmitter/data_count" type="array">
+         <obj_property name="ElementShortName">data_count[3:0]</obj_property>
+         <obj_property name="ObjectShortName">data_count[3:0]</obj_property>
+         <obj_property name="CustomSignalColor">#E0FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/TB_nexys_RS232/TX_RDY" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">TX_RDY</obj_property>
+      <obj_property name="ObjectShortName">TX_RDY</obj_property>
+      <obj_property name="label">Eot</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_nexys_RS232/TD" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">TD</obj_property>
+      <obj_property name="ObjectShortName">TD</obj_property>
+      <obj_property name="label">Tx</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider34">
+      <obj_property name="label">Receiver</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_nexys_RS232/Unit_nexys_RS232/UUT/LineRD_in" type="logic">
+      <obj_property name="ElementShortName">LineRD_in</obj_property>
+      <obj_property name="ObjectShortName">LineRD_in</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="group92" type="group">
+      <obj_property name="label">FSM</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/TB_nexys_RS232/Unit_nexys_RS232/UUT/Receiver/next_state" type="other">
+         <obj_property name="ElementShortName">next_state</obj_property>
+         <obj_property name="ObjectShortName">next_state</obj_property>
+         <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_nexys_RS232/Unit_nexys_RS232/UUT/Receiver/current_state" type="other">
+         <obj_property name="ElementShortName">current_state</obj_property>
+         <obj_property name="ObjectShortName">current_state</obj_property>
+         <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group55" type="group">
+      <obj_property name="label">Counters</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/TB_nexys_RS232/Unit_nexys_RS232/UUT/Receiver/HalfBitCounter" type="array">
+         <obj_property name="ElementShortName">HalfBitCounter[7:0]</obj_property>
+         <obj_property name="ObjectShortName">HalfBitCounter[7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_nexys_RS232/Unit_nexys_RS232/UUT/Receiver/bitCounter" type="array">
+         <obj_property name="ElementShortName">bitCounter[7:0]</obj_property>
+         <obj_property name="ObjectShortName">bitCounter[7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_nexys_RS232/Unit_nexys_RS232/UUT/Receiver/DataCount" type="array">
+         <obj_property name="ElementShortName">DataCount[3:0]</obj_property>
+         <obj_property name="ObjectShortName">DataCount[3:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/TB_nexys_RS232/Unit_nexys_RS232/UUT/Valid_out" type="logic">
+      <obj_property name="ElementShortName">Valid_out</obj_property>
+      <obj_property name="ObjectShortName">Valid_out</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_nexys_RS232/Unit_nexys_RS232/UUT/Receiver/Code_out" type="logic">
+      <obj_property name="ElementShortName">Code_out</obj_property>
+      <obj_property name="ObjectShortName">Code_out</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_nexys_RS232/Unit_nexys_RS232/UUT/Receiver/Store_out" type="logic">
+      <obj_property name="ElementShortName">Store_out</obj_property>
+      <obj_property name="ObjectShortName">Store_out</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_nexys_RS232/Unit_nexys_RS232/UUT/StopBit" type="logic">
+      <obj_property name="ElementShortName">StopBit</obj_property>
+      <obj_property name="ObjectShortName">StopBit</obj_property>
+      <obj_property name="CustomSignalColor">#FFFFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider35">
+      <obj_property name="label">Shift Register</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_nexys_RS232/Unit_nexys_RS232/UUT/Shift/Enable" type="logic">
+      <obj_property name="ElementShortName">Enable</obj_property>
+      <obj_property name="ObjectShortName">Enable</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_nexys_RS232/Unit_nexys_RS232/UUT/Shift/D" type="logic">
+      <obj_property name="ElementShortName">D</obj_property>
+      <obj_property name="ObjectShortName">D</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_nexys_RS232/Unit_nexys_RS232/UUT/Shift/Q" type="array">
+      <obj_property name="ElementShortName">Q[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Q[7:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider37">
+      <obj_property name="label">Fifo</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_nexys_RS232/Unit_nexys_RS232/UUT/Fifo_write" type="logic">
+      <obj_property name="ElementShortName">Fifo_write</obj_property>
+      <obj_property name="ObjectShortName">Fifo_write</obj_property>
+      <obj_property name="CustomSignalColor">#FFFFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_nexys_RS232/Data_read" type="logic">
+      <obj_property name="ElementShortName">Data_read</obj_property>
+      <obj_property name="ObjectShortName">Data_read</obj_property>
+      <obj_property name="CustomSignalColor">#FFFFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider32">
+      <obj_property name="label">Output</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_nexys_RS232/Unit_nexys_RS232/UUT/Internal_memory/empty" type="logic">
+      <obj_property name="ElementShortName">empty</obj_property>
+      <obj_property name="ObjectShortName">empty</obj_property>
+      <obj_property name="CustomSignalColor">#FFFFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_nexys_RS232/Unit_nexys_RS232/UUT/Internal_memory/full" type="logic">
+      <obj_property name="ElementShortName">full</obj_property>
+      <obj_property name="ObjectShortName">full</obj_property>
+      <obj_property name="CustomSignalColor">#FFFFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_nexys_RS232/Unit_nexys_RS232/UUT/Internal_memory/dout" type="array">
+      <obj_property name="ElementShortName">dout[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dout[7:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+</wave_config>

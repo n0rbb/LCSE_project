@@ -25,3 +25,5 @@ INFO: [VRFC 10-311] analyzing module fifo_wr_bin_cntr
 INFO: [VRFC 10-311] analyzing module fifo_wr_logic
 INFO: [VRFC 10-311] analyzing module fifo_wr_status_flags_ss
 INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/worbb/Downloads/Prueba placa/Prueba placa/fifo/tb_nexys_RS232.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'TB_nexys_RS232'

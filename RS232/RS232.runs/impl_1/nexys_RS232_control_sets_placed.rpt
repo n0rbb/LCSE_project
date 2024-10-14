@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date         : Sun Oct 13 17:30:38 2024
+| Date         : Mon Oct 14 23:31:45 2024
 | Host         : DESKTOP-NDA5VSL running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file nexys_RS232_control_sets_placed.rpt
 | Design       : nexys_RS232
@@ -59,7 +59,7 @@ Table of Contents
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | No           | No                    | No                     |               1 |            1 |
-| No           | No                    | Yes                    |              59 |           22 |
+| No           | No                    | Yes                    |              59 |           18 |
 | No           | Yes                   | No                     |               4 |            2 |
 | Yes          | No                    | No                     |               0 |            0 |
 | Yes          | No                    | Yes                    |              24 |            7 |
@@ -75,12 +75,12 @@ Table of Contents
 +--------------------------+--------------------------------------------------------------------------------------------------+---------------------+------------------+----------------+--------------+
 |  clk_20MHz/inst/clk_out1 |                                                                                                  |                     |                1 |              1 |         1.00 |
 |  clk_20MHz/inst/clk_out1 | UUT/Receiver/DataCount                                                                           | UUT/Receiver/SW[15] |                1 |              4 |         4.00 |
-|  clk_20MHz/inst/clk_out1 | UUT/Transmitter/data_count                                                                       | UUT/Receiver/SW[15] |                1 |              4 |         4.00 |
-|  clk_20MHz/inst/clk_out1 | UUT/Internal_memory/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/E[0] | UUT/Receiver/SW[15] |                2 |              8 |         4.00 |
-|  clk_20MHz/inst/clk_out1 | UUT/Internal_memory/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/E[0] | UUT/Receiver/SW[15] |                2 |              8 |         4.00 |
+|  clk_20MHz/inst/clk_out1 | UUT/Transmitter/data_count                                                                       | UUT/Receiver/SW[15] |                2 |              4 |         2.00 |
 |  clk_20MHz/inst/clk_out1 | UUT/Receiver/E[0]                                                                                | UUT/Receiver/SW[15] |                2 |              8 |         4.00 |
-|  clk_20MHz/inst/clk_out1 | UUT/Transmitter/E[0]                                                                             | UUT/Receiver/SW[15] |                3 |              8 |         2.67 |
-|  clk_20MHz/inst/clk_out1 |                                                                                                  | UUT/Receiver/SW[15] |               24 |             63 |         2.62 |
+|  clk_20MHz/inst/clk_out1 | UUT/Transmitter/E[0]                                                                             | UUT/Receiver/SW[15] |                2 |              8 |         4.00 |
+|  clk_20MHz/inst/clk_out1 | UUT/Internal_memory/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/E[0] | UUT/Receiver/SW[15] |                1 |              8 |         8.00 |
+|  clk_20MHz/inst/clk_out1 | UUT/Internal_memory/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/E[0] | UUT/Receiver/SW[15] |                3 |              8 |         2.67 |
+|  clk_20MHz/inst/clk_out1 |                                                                                                  | UUT/Receiver/SW[15] |               20 |             63 |         3.15 |
 +--------------------------+--------------------------------------------------------------------------------------------------+---------------------+------------------+----------------+--------------+
 
 

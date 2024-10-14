@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Sun Oct 13 17:33:52 2024
-# Process ID: 1660
+# Start of session at: Mon Oct 14 23:30:59 2024
+# Process ID: 17748
 # Current directory: C:/Users/worbb/Desktop/Electronics/LCSE/RS232/RS232.runs/impl_1
 # Command line: vivado.exe -log nexys_RS232.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source nexys_RS232.tcl -notrace
 # Log file: C:/Users/worbb/Desktop/Electronics/LCSE/RS232/RS232.runs/impl_1/nexys_RS232.vdi
@@ -19,6 +19,6 @@
 # Host memory       :16972 MB
 # Swap memory       :33285 MB
 # Total Virtual     :50258 MB
-# Available Virtual :36533 MB
+# Available Virtual :40333 MB
 #-----------------------------------------------------------
 source nexys_RS232.tcl -notrace

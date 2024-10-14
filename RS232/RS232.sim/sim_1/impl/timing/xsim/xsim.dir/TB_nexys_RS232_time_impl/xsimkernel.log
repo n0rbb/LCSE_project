@@ -1,7 +1,7 @@
-Running: xsim.dir/TB_nexys_RS232_time_impl/xsimk.exe -simmode gui -wdb TB_nexys_RS232_time_impl.wdb -simrunnum 0 -socket 59980
+Running: xsim.dir/TB_nexys_RS232_time_impl/xsimk.exe -simmode gui -wdb TB_nexys_RS232_time_impl.wdb -simrunnum 0 -socket 55325
 Design successfully loaded
-Design Loading Memory Usage: 11236 KB (Peak: 11236 KB)
-Design Loading CPU Usage: 15 ms
+Design Loading Memory Usage: 11280 KB (Peak: 11280 KB)
+Design Loading CPU Usage: 30 ms
 Simulation completed
-Simulation Memory Usage: 17772 KB (Peak: 17772 KB)
-Simulation CPU Usage: 6358 ms
+Simulation Memory Usage: 14524 KB (Peak: 14524 KB)
+Simulation CPU Usage: 77 ms

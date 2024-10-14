@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date         : Sun Oct 13 17:30:33 2024
+| Date         : Mon Oct 14 23:31:39 2024
 | Host         : DESKTOP-NDA5VSL running 64-bit major release  (build 9200)
 | Command      : report_drc -file nexys_RS232_drc_opted.rpt -pb nexys_RS232_drc_opted.pb -rpx nexys_RS232_drc_opted.rpx
 | Design       : nexys_RS232
@@ -57,7 +57,7 @@ Related violations: <none>
 
 PLIO-3#1 Warning
 Placement Constraints Check for IO constraints  
-Partially locked IO Bus is found. Following components of the IO Bus SW[15:0] are not locked:  SW[14] SW[13] SW[12] SW[11] SW[10] SW[9] SW[8]
+Partially locked IO Bus is found. Following components of the IO Bus SW[15:0] are not locked:  SW[14] SW[13] SW[11] SW[10] SW[9] SW[8]
 Related violations: <none>
 
 REQP-1840#1 Warning

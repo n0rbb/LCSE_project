@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/worbb/Downloads/Prueba placa/Prueba placa/fifo/Nexys_RS232.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'nexys_RS232'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/worbb/Downloads/Prueba placa/Prueba placa/fifo/tb_nexys_RS232.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'TB_nexys_RS232'

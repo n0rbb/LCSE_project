@@ -57,7 +57,6 @@ if {$::dispatch::connected} {
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 2
-set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-1
 
@@ -82,12 +81,12 @@ read_vhdl -library xil_defaultlib {
   {C:/Users/worbb/Downloads/Prueba placa/Prueba placa/fifo/fifo.srcs/sources_1/new/trx.vhd}
   {C:/Users/worbb/Downloads/Prueba placa/Prueba placa/fifo/Nexys_RS232.vhd}
 }
-read_ip -quiet c:/Users/worbb/Desktop/Electronics/LCSE/RS232/RS232.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+read_ip -quiet C:/Users/worbb/Desktop/Electronics/LCSE/RS232/RS232.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
 set_property used_in_implementation false [get_files -all c:/Users/worbb/Desktop/Electronics/LCSE/RS232/RS232.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/worbb/Desktop/Electronics/LCSE/RS232/RS232.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/worbb/Desktop/Electronics/LCSE/RS232/RS232.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc]
 
-read_ip -quiet c:/Users/worbb/Desktop/Electronics/LCSE/RS232/RS232.srcs/sources_1/ip/fifo/fifo.xci
+read_ip -quiet C:/Users/worbb/Desktop/Electronics/LCSE/RS232/RS232.srcs/sources_1/ip/fifo/fifo.xci
 set_property used_in_implementation false [get_files -all c:/Users/worbb/Desktop/Electronics/LCSE/RS232/RS232.gen/sources_1/ip/fifo/fifo.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/worbb/Desktop/Electronics/LCSE/RS232/RS232.gen/sources_1/ip/fifo/fifo_ooc.xdc]
 
