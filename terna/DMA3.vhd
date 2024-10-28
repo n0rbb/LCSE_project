@@ -44,7 +44,7 @@ entity Control_DMA is
 
       Databus : inout std_logic_vector(7 downto 0)
    );
-end DMA;
+end Control_DMA;
 
 architecture Behavioral of Control_DMA is
    type states is (idle, read_fifo, write_ram, load_transmitter);
