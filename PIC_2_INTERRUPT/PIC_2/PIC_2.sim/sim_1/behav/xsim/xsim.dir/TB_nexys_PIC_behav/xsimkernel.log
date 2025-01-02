@@ -1,0 +1,7 @@
+Running: xsim.dir/TB_nexys_PIC_behav/xsimk.exe -simmode gui -wdb TB_nexys_PIC_behav.wdb -simrunnum 0 -socket 55835
+Design successfully loaded
+Design Loading Memory Usage: 8300 KB (Peak: 8300 KB)
+Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 18232 KB (Peak: 18232 KB)
+Simulation CPU Usage: 6312 ms

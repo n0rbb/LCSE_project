@@ -1,0 +1,99 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Thu Jan  2 23:23:10 2025
+| Host         : DESKTOP-NDA5VSL running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file nexys_PIC_control_sets_placed.rpt
+| Design       : nexys_PIC
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    21 |
+|    Minimum number of control sets                        |    21 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    53 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    21 |
+| >= 0 to < 4        |     3 |
+| >= 4 to < 6        |     3 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     7 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     2 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     6 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               4 |            1 |
+| No           | No                    | Yes                    |             116 |           47 |
+| No           | Yes                   | No                     |               1 |            1 |
+| Yes          | No                    | No                     |             209 |           62 |
+| Yes          | No                    | Yes                    |             465 |          154 |
+| Yes          | Yes                   | No                     |              24 |            4 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------------------------+------------------------------------------------------------------------------------------------------------+-------------------------------------+------------------+----------------+--------------+
+|             Clock Signal             |                                                Enable Signal                                               |           Set/Reset Signal          | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------------------------------+------------------------------------------------------------------------------------------------------------+-------------------------------------+------------------+----------------+--------------+
+|  UUT/ALU_PHY/FlagZ_r_reg_LDC_i_1_n_0 |                                                                                                            | UUT/ALU_PHY/FlagZ_r_reg_LDC_i_2_n_0 |                1 |              1 |         1.00 |
+|  clk_20MHz/inst/clk_out1             |                                                                                                            | UUT/ALU_PHY/FlagZ_r_reg_LDC_i_2_n_0 |                1 |              1 |         1.00 |
+|  clk_20MHz/inst/clk_out1             | UUT/CPU_PHY/E[0]                                                                                           | UUT/ALU_PHY/FlagZ_r_reg_LDC_i_1_n_0 |                1 |              1 |         1.00 |
+|  clk_20MHz/inst/clk_out1             |                                                                                                            |                                     |                1 |              4 |         4.00 |
+|  clk_20MHz/inst/clk_out1             | UUT/RS232_PHY/Receiver/DataCount                                                                           | BTNU_IBUF                           |                1 |              4 |         4.00 |
+|  clk_20MHz/inst/clk_out1             | UUT/RS232_PHY/Transmitter/data_count                                                                       | BTNU_IBUF                           |                1 |              4 |         4.00 |
+|  clk_20MHz/inst/clk_out1             | UUT/CPU_PHY/INS_reg_reg[0]_5[0]                                                                            | BTNU_IBUF                           |                4 |              8 |         2.00 |
+|  clk_20MHz/inst/clk_out1             | UUT/CPU_PHY/INS_reg_reg[7]_0[0]                                                                            | BTNU_IBUF                           |                4 |              8 |         2.00 |
+|  clk_20MHz/inst/clk_out1             | UUT/CPU_PHY/INS_reg_reg[7]_1[0]                                                                            | BTNU_IBUF                           |                5 |              8 |         1.60 |
+|  clk_20MHz/inst/clk_out1             | UUT/RS232_PHY/Receiver/E[0]                                                                                | BTNU_IBUF                           |                1 |              8 |         8.00 |
+|  clk_20MHz/inst/clk_out1             | UUT/RS232_PHY/Transmitter/E[0]                                                                             | BTNU_IBUF                           |                2 |              8 |         4.00 |
+|  clk_20MHz/inst/clk_out1             | UUT//contents_ram_reg_0_63_0_0_i_1_n_0                                                                     |                                     |                2 |              8 |         4.00 |
+|  clk_20MHz/inst/clk_out1             | UUT/DMA_PHY/TX_Data[7]_i_1_n_0                                                                             | BTNU_IBUF                           |                3 |              8 |         2.67 |
+|  clk_20MHz/inst/clk_out1             | UUT/RS232_PHY/Internal_memory/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/E[0] | BTNU_IBUF                           |                2 |             12 |         6.00 |
+|  clk_20MHz/inst/clk_out1             | UUT/RS232_PHY/Internal_memory/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/E[0] | BTNU_IBUF                           |                2 |             12 |         6.00 |
+|  clk_20MHz/inst/clk_out1             | UUT/CPU_PHY/INS_reg_reg[0]_0                                                                               |                                     |                4 |             16 |         4.00 |
+|  clk_20MHz/inst/clk_out1             | UUT/DMA_PHY/ByteCounterRX[31]_i_1_n_0                                                                      | BTNU_IBUF                           |               11 |             32 |         2.91 |
+|  clk_20MHz/inst/clk_out1             | UUT/CPU_PHY/E[0]                                                                                           | BTNU_IBUF                           |               27 |             56 |         2.07 |
+|  clk_20MHz/inst/clk_out1             |                                                                                                            | BTNU_IBUF                           |               46 |            115 |         2.50 |
+|  clk_20MHz/inst/clk_out1             | UUT/RAM_PHY/RAM_especifica/E[0]                                                                            |                                     |               62 |            209 |         3.37 |
+|  clk_20MHz/inst/clk_out1             | UUT/CPU_PHY/in0                                                                                            | BTNU_IBUF                           |               94 |            320 |         3.40 |
++--------------------------------------+------------------------------------------------------------------------------------------------------------+-------------------------------------+------------------+----------------+--------------+
+
+
