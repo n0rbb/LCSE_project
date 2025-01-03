@@ -1,0 +1,6 @@
+0.7
+2020.2
+May 22 2024
+19:03:11
+C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.sim/sim_1/impl/func/xsim/glbl.v,1708598507,verilog,,,,glbl,,,,,,,,
+C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.sim/sim_1/impl/func/xsim/nexys_PIC_func_impl.vhd,1733400473,vhdl,,,,alu;clk_wiz_0;clk_wiz_0_clk_wiz;controlador_dma;cpu;fifo;fifo_blk_mem_gen_generic_cstr;fifo_blk_mem_gen_prim_width;fifo_blk_mem_gen_prim_wrapper;fifo_blk_mem_gen_top;fifo_blk_mem_gen_v8_4_8;fifo_blk_mem_gen_v8_4_8_synth;fifo_generator_ramfifo;fifo_generator_top;fifo_generator_v13_2_10;fifo_generator_v13_2_10_synth;fifo_memory;fifo_rd_bin_cntr;fifo_rd_logic;fifo_rd_status_flags_ss;fifo_wr_bin_cntr;fifo_wr_logic;fifo_wr_status_flags_ss;nexys_pic;pictop;ram_es;ram_pg;ram_top;rom;rrx;rs232_top;shiftregister;trx,,,,,,,,

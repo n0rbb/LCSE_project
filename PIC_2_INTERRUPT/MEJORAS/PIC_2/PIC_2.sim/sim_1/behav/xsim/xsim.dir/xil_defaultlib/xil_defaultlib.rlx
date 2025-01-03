@@ -1,0 +1,24 @@
+0.7
+2020.2
+May 22 2024
+19:03:11
+C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.v,1733397253,verilog,,,,clk_wiz_0,,,../../../../PIC_2.ip_user_files/ipstatic,,,,,
+C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v,1733397253,verilog,,C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.v,,clk_wiz_0_clk_wiz,,,../../../../PIC_2.ip_user_files/ipstatic,,,,,
+C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.gen/sources_1/ip/fifo/sim/fifo.v,1733397368,verilog,,C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v,,fifo,,,../../../../PIC_2.ip_user_files/ipstatic,,,,,
+C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.sim/sim_1/behav/xsim/glbl.v,1708598507,verilog,,,,glbl,,,,,,,,
+C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.srcs/sim_1/new/tb_Nexys_PIC.vhd,1735905182,vhdl,,,,tb_nexys_pic,,,,,,,,
+C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.srcs/sources_1/imports/PIC.srcs/sim_1/new/RS232_test.vhd,1735905033,vhdl,C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.srcs/sim_1/new/tb_Nexys_PIC.vhd,,,rs232_test,,,,,,,,
+C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.srcs/sources_1/imports/PIC.srcs/sources_1/new/ALU.vhd,1735858679,vhdl,,,,alu,,,,,,,,
+C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.srcs/sources_1/imports/PIC.srcs/sources_1/new/CPU.vhd,1735859487,vhdl,,,,cpu,,,,,,,,
+C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.srcs/sources_1/imports/PIC.srcs/sources_1/new/DMA.vhd,1735858911,vhdl,,,,dma,,,,,,,,
+C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.srcs/sources_1/imports/PIC.srcs/sources_1/new/PIC_pkg.vhd,1735821610,vhdl,C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.srcs/sim_1/new/tb_Nexys_PIC.vhd,,,pic_pkg,,,,,,,,
+C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.srcs/sources_1/imports/PIC.srcs/sources_1/new/PICtop.vhd,1735863410,vhdl,,,,pictop,,,,,,,,
+C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.srcs/sources_1/imports/PIC.srcs/sources_1/new/RAM_especifica.vhd,1735574643,vhdl,,,,ram_es,,,,,,,,
+C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.srcs/sources_1/imports/PIC.srcs/sources_1/new/RAM_general.vhd,1735574646,vhdl,,,,ram_pg,,,,,,,,
+C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.srcs/sources_1/imports/PIC.srcs/sources_1/new/RAM_top.vhd,1735552328,vhdl,,,,ram_top,,,,,,,,
+C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.srcs/sources_1/imports/PIC.srcs/sources_1/new/ROM.vhd,1735831632,vhdl,,,,rom,,,,,,,,
+C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.srcs/sources_1/imports/PIC.srcs/sources_1/new/RS232_top.vhd,1734003185,vhdl,,,,rs232_top,,,,,,,,
+C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.srcs/sources_1/imports/PIC.srcs/sources_1/new/ShiftRegister.vhd,1732200181,vhdl,,,,shiftregister,,,,,,,,
+C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.srcs/sources_1/imports/PIC.srcs/sources_1/new/nexys_PIC.vhd,1735864915,vhdl,,,,nexys_pic,,,,,,,,
+C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.srcs/sources_1/imports/PIC.srcs/sources_1/new/rrx.vhd,1732199968,vhdl,,,,rrx,,,,,,,,
+C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.srcs/sources_1/imports/PIC.srcs/sources_1/new/trx.vhd,1732199928,vhdl,,,,trx,,,,,,,,

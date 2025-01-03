@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="PICtop_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="PICtop_tb" />
+            <top_module name="glbl" />
+            <top_module name="pic_pkg" />
+            <top_module name="rs232_test" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="471,448.243 ns"></ZoomStartTime>
+      <ZoomEndTime time="472,091.696 ns"></ZoomEndTime>
+      <Cursor1Time time="471,850.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="294"></NameColumnWidth>
+      <ValueColumnWidth column_width="116"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="47" />
+   <wvobject fp_name="/PICtop_tb/Reset" type="logic">
+      <obj_property name="ElementShortName">Reset</obj_property>
+      <obj_property name="ObjectShortName">Reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PICtop_tb/Clk" type="logic">
+      <obj_property name="ElementShortName">Clk</obj_property>
+      <obj_property name="ObjectShortName">Clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PICtop_tb/RS232_RX" type="logic">
+      <obj_property name="ElementShortName">RS232_RX</obj_property>
+      <obj_property name="ObjectShortName">RS232_RX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PICtop_tb/RS232_TX" type="logic">
+      <obj_property name="ElementShortName">RS232_TX</obj_property>
+      <obj_property name="ObjectShortName">RS232_TX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PICtop_tb/switches" type="array">
+      <obj_property name="ElementShortName">switches[7:0]</obj_property>
+      <obj_property name="ObjectShortName">switches[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PICtop_tb/Temp_H" type="array">
+      <obj_property name="ElementShortName">Temp_H[6:0]</obj_property>
+      <obj_property name="ObjectShortName">Temp_H[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PICtop_tb/Temp_L" type="array">
+      <obj_property name="ElementShortName">Temp_L[6:0]</obj_property>
+      <obj_property name="ObjectShortName">Temp_L[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PICtop_tb/UUT/DMA_PHY/DataBus" type="array">
+      <obj_property name="ElementShortName">DataBus[7:0]</obj_property>
+      <obj_property name="ObjectShortName">DataBus[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider80">
+      <obj_property name="label">CPU</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PICtop_tb/UUT/CPU_PHY/current_state" type="other">
+      <obj_property name="ElementShortName">current_state</obj_property>
+      <obj_property name="ObjectShortName">current_state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PICtop_tb/UUT/CPU_PHY/SEND_comm" type="logic">
+      <obj_property name="ElementShortName">SEND_comm</obj_property>
+      <obj_property name="ObjectShortName">SEND_comm</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PICtop_tb/UUT/DMA_PHY/Send_comm" type="logic">
+      <obj_property name="ElementShortName">Send_comm</obj_property>
+      <obj_property name="ObjectShortName">Send_comm</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PICtop_tb/UUT/CPU_PHY/RAM_Write" type="logic">
+      <obj_property name="ElementShortName">RAM_Write</obj_property>
+      <obj_property name="ObjectShortName">RAM_Write</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PICtop_tb/UUT/CPU_PHY/RAM_OE" type="logic">
+      <obj_property name="ElementShortName">RAM_OE</obj_property>
+      <obj_property name="ObjectShortName">RAM_OE</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider110">
+      <obj_property name="label">DMA</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PICtop_tb/UUT/DMA_PHY/current_state" type="other">
+      <obj_property name="ElementShortName">current_state</obj_property>
+      <obj_property name="ObjectShortName">current_state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PICtop_tb/UUT/DMA_PHY/Write_en" type="logic">
+      <obj_property name="ElementShortName">Write_en</obj_property>
+      <obj_property name="ObjectShortName">Write_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PICtop_tb/UUT/DMA_PHY/READY" type="logic">
+      <obj_property name="ElementShortName">READY</obj_property>
+      <obj_property name="ObjectShortName">READY</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PICtop_tb/UUT/DMA_PHY/Send_comm" type="logic">
+      <obj_property name="ElementShortName">Send_comm</obj_property>
+      <obj_property name="ObjectShortName">Send_comm</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PICtop_tb/UUT/DMA_PHY/OE" type="logic">
+      <obj_property name="ElementShortName">OE</obj_property>
+      <obj_property name="ObjectShortName">OE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PICtop_tb/UUT/DMA_PHY/READY" type="logic">
+      <obj_property name="ElementShortName">READY</obj_property>
+      <obj_property name="ObjectShortName">READY</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PICtop_tb/UUT/CPU_PHY/DMA_ACK" type="logic">
+      <obj_property name="ElementShortName">DMA_ACK</obj_property>
+      <obj_property name="ObjectShortName">DMA_ACK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PICtop_tb/UUT/DMA_PHY/DMA_RQ" type="logic">
+      <obj_property name="ElementShortName">DMA_RQ</obj_property>
+      <obj_property name="ObjectShortName">DMA_RQ</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PICtop_tb/UUT/DMA_PHY/Valid_D" type="logic">
+      <obj_property name="ElementShortName">Valid_D</obj_property>
+      <obj_property name="ObjectShortName">Valid_D</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider23">
+      <obj_property name="label">ALU</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PICtop_tb/UUT/ALU_PHY/ALU_op" type="other">
+      <obj_property name="ElementShortName">ALU_op</obj_property>
+      <obj_property name="ObjectShortName">ALU_op</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PICtop_tb/UUT/ALU_PHY/Databus" type="array">
+      <obj_property name="ElementShortName">Databus[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Databus[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PICtop_tb/UUT/ALU_PHY/Reset" type="logic">
+      <obj_property name="ElementShortName">Reset</obj_property>
+      <obj_property name="ObjectShortName">Reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PICtop_tb/UUT/ALU_PHY/Clk" type="logic">
+      <obj_property name="ElementShortName">Clk</obj_property>
+      <obj_property name="ObjectShortName">Clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PICtop_tb/UUT/ALU_PHY/FlagZ" type="logic">
+      <obj_property name="ElementShortName">FlagZ</obj_property>
+      <obj_property name="ObjectShortName">FlagZ</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PICtop_tb/UUT/ALU_PHY/FlagC" type="logic">
+      <obj_property name="ElementShortName">FlagC</obj_property>
+      <obj_property name="ObjectShortName">FlagC</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PICtop_tb/UUT/ALU_PHY/FlagN" type="logic">
+      <obj_property name="ElementShortName">FlagN</obj_property>
+      <obj_property name="ObjectShortName">FlagN</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PICtop_tb/UUT/ALU_PHY/FlagE" type="logic">
+      <obj_property name="ElementShortName">FlagE</obj_property>
+      <obj_property name="ObjectShortName">FlagE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PICtop_tb/UUT/ALU_PHY/Index_Reg" type="array">
+      <obj_property name="ElementShortName">Index_Reg[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Index_Reg[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PICtop_tb/UUT/ALU_PHY/A" type="array">
+      <obj_property name="ElementShortName">A[7:0]</obj_property>
+      <obj_property name="ObjectShortName">A[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PICtop_tb/UUT/ALU_PHY/B" type="array">
+      <obj_property name="ElementShortName">B[7:0]</obj_property>
+      <obj_property name="ObjectShortName">B[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider477">
+      <obj_property name="label">RAM</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PICtop_tb/UUT/RAM_PHY/RAM_especifica/Clk" type="logic">
+      <obj_property name="ElementShortName">Clk</obj_property>
+      <obj_property name="ObjectShortName">Clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PICtop_tb/UUT/RAM_PHY/RAM_especifica/Reset" type="logic">
+      <obj_property name="ElementShortName">Reset</obj_property>
+      <obj_property name="ObjectShortName">Reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PICtop_tb/UUT/RAM_PHY/RAM_especifica/write_en" type="logic">
+      <obj_property name="ElementShortName">write_en</obj_property>
+      <obj_property name="ObjectShortName">write_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PICtop_tb/UUT/RAM_PHY/RAM_especifica/oe" type="logic">
+      <obj_property name="ElementShortName">oe</obj_property>
+      <obj_property name="ObjectShortName">oe</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PICtop_tb/UUT/RAM_PHY/RAM_especifica/address" type="array">
+      <obj_property name="ElementShortName">address[7:0]</obj_property>
+      <obj_property name="ObjectShortName">address[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PICtop_tb/UUT/RAM_PHY/RAM_especifica/databus" type="array">
+      <obj_property name="ElementShortName">databus[7:0]</obj_property>
+      <obj_property name="ObjectShortName">databus[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PICtop_tb/UUT/RAM_PHY/RAM_especifica/Switches" type="array">
+      <obj_property name="ElementShortName">Switches[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Switches[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PICtop_tb/UUT/RAM_PHY/RAM_especifica/Temp_L" type="array">
+      <obj_property name="ElementShortName">Temp_L[6:0]</obj_property>
+      <obj_property name="ObjectShortName">Temp_L[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PICtop_tb/UUT/RAM_PHY/RAM_especifica/Temp_H" type="array">
+      <obj_property name="ElementShortName">Temp_H[6:0]</obj_property>
+      <obj_property name="ObjectShortName">Temp_H[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PICtop_tb/UUT/RAM_PHY/RAM_especifica/contents_ram" type="array">
+      <obj_property name="ElementShortName">contents_ram[63:0][7:0]</obj_property>
+      <obj_property name="ObjectShortName">contents_ram[63:0][7:0]</obj_property>
+   </wvobject>
+</wave_config>
