@@ -1,7 +1,7 @@
-Running: xsim.dir/TB_nexys_PIC_time_synth/xsimk.exe -simmode gui -wdb TB_nexys_PIC_time_synth.wdb -simrunnum 0 -socket 56260
+Running: xsim.dir/TB_nexys_PIC_time_synth/xsimk.exe -simmode gui -wdb TB_nexys_PIC_time_synth.wdb -simrunnum 0 -socket 57341
 Design successfully loaded
-Design Loading Memory Usage: 35376 KB (Peak: 35376 KB)
-Design Loading CPU Usage: 78 ms
+Design Loading Memory Usage: 35548 KB (Peak: 35548 KB)
+Design Loading CPU Usage: 93 ms
 Simulation completed
-Simulation Memory Usage: 51288 KB (Peak: 51288 KB)
-Simulation CPU Usage: 89187 ms
+Simulation Memory Usage: 51232 KB (Peak: 51232 KB)
+Simulation CPU Usage: 87171 ms

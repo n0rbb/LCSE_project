@@ -125,7 +125,7 @@ END PROCESS;
 --     BTNL <= i_write_en;     -- LEFT button:    RAM write 
 --     BTNR <= i_oe;      -- RIGHT button:   RAM read (active low)
 --     BTNC <= i_send;         -- CENTER button:  Send_comm 
-    SW(12) <= StopBit;
+    SW(15) <= StopBit;
 -- 2.Datos de entrada y salida
 --     SW (15 downto 8) <= i_address;    -- UPPER SW BYTE:  RAM address
 --     SW (7 downto 0) <= i_data_in;     -- LOWER SW BYTE:  RAM data for write

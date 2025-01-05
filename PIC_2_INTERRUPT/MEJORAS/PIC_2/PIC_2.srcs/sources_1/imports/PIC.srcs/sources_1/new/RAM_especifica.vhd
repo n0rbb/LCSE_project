@@ -35,7 +35,7 @@ p_ram : process (reset, clk)  -- sí reset
 begin
   if reset = '0' then -- Inicializar todas las direcciones específicas
     contents_ram(to_integer(unsigned(DMA_RX_BUFFER_MSB))) <= "00000000";
-    contents_ram(to_integer(unsigned(DMA_RX_BUFFER_MID))) <= x"00";
+    contents_ram(to_integer(unsigned(DMA_RX_BUFFER_MID))) <= "00000000";
     contents_ram(to_integer(unsigned(DMA_RX_BUFFER_LSB))) <= "00000000";
     contents_ram(to_integer(unsigned(NEW_INST))) <= "00000000";
     contents_ram(to_integer(unsigned(DMA_TX_BUFFER_MSB))) <= X"00";
@@ -45,7 +45,7 @@ begin
     contents_ram((to_integer(unsigned(CAL_OP)) - 1) downto to_integer(unsigned(LEVER_BASE))) <= (others => "00000000"); --IGUAL, REVISAR QUE NO ESTOY ENTRANDO EN DIRECCIONES RESERVADAS
     contents_ram(to_integer(unsigned(CAL_OP))) <= "00000000";
     
-    contents_ram(to_integer(unsigned(T_STAT))) <= "00010001"; -- BCD 0011 0011
+    contents_ram(to_integer(unsigned(T_STAT))) <= "00010001"; -- BCD
      
   elsif clk'event and clk = '1' then    
     if write_en = '1' then --and databus /= "ZZZZZZZZ" then

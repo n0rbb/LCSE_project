@@ -40,6 +40,9 @@ entity DMA is
       
       INT : out std_logic;
       INT_ACK : in std_logic;
+      
+      RGB_R : out std_logic;
+      RGB_G : out std_logic;
 
       TX_Data : out std_logic_vector(7 downto 0);
       Address : out std_logic_vector(7 downto 0);
@@ -138,7 +141,6 @@ begin
 
             else
                Address <= DMA_RX_BUFFER_LSB;
-             
                next_state <= send_interrupt; --Paso al estado de generación de la interrupción
 
             end if;
@@ -268,6 +270,8 @@ begin
          ByteCounterTX <= 0;
          ByteCounterRX <= 0;
          TX_Data <= (others => '0');
+         RGB_R <= '0';
+         RGB_G <= '0';
         -- DataBuffer <= (others => 'Z');
          current_state <= idle;
         
@@ -302,6 +306,13 @@ begin
             
             when load_transmitter =>
                TX_Data <= DataBus;
+               if DataBus = X"45" or DataBus = X"52" then --ER
+                    RGB_G <= '0';
+                    RGB_R <= '1';
+               else --No hay error, ;) o info del actuador)
+                    RGB_G <= '1';
+                    RGB_R <= '0';
+               end if;
             --   ByteCounterTX <= ByteCounterTX;
             --   ByteCounterRX <= ByteCounterRX;
                 if (ByteCounterTX < 2) then   --If ByteCounterTX = 0

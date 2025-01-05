@@ -21,24 +21,17 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.all;
 use IEEE.NUMERIC_STD.all;
 use work.PIC_pkg.all;
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
 
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
 
 entity ALU is
   port (
     Reset         : in std_logic; -- asynnchronous, active low 
     Clk           : in std_logic; -- Sys clock, 20MHz, rising_edge 
     ALU_op        : in alu_op; -- u-instructions from CPU 
-    FlagZ         : out std_logic; -- Zero flag 
-    FlagC         : out std_logic; -- Carry flag 
-    FlagN         : out std_logic; -- Nibble carry bit 
-    FlagE         : out std_logic; -- Error flag 
+    FlagZ         : out std_logic; -- Zero  
+    FlagC         : out std_logic; -- Carry  
+    FlagN         : out std_logic; -- Nibble 
+    FlagE         : out std_logic; -- Error  
     Index_Reg     : out std_logic_vector(7 downto 0); -- Index register 
     Databus       : inout std_logic_vector(7 downto 0) -- System Data bus
   );
@@ -64,8 +57,6 @@ architecture Behavioral of ALU is
 --  attribute dont_touch of FlagN_i : signal is "true";
 --  attribute dont_touch of FlagE_i : signal is "true";
 begin
-
-  -- ALU Core
   combinacional : process (ALU_op, A, B, ACC, Index_Reg_i, Sum, Sum4, ACC_next, Databus, FlagZ_i, FlagC_i, FlagN_i, FlagE_i)
   begin
     --Default
@@ -220,8 +211,6 @@ begin
         FlagN_r <= FlagN_i;
         FlagE_r <= FlagE_i;
       end if;
-      
-      
       
     end if;
   end process secuencial;

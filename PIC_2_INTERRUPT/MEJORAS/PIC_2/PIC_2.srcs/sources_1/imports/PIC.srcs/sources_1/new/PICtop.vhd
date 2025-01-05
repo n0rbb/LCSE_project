@@ -20,6 +20,9 @@ entity PICtop is
     Temp_L      : out std_logic_vector(6 downto 0);   -- Display value for TL
     Temp_H      : out std_logic_vector(6 downto 0);  -- Display value for TH
     
+    RGB_R       : out std_logic;
+    RGB_G       : out std_logic;
+    
     StopBit     : in std_logic); --Mejora RS232 - Escoger stopbit
 end PICtop;
 
@@ -103,7 +106,10 @@ architecture behavior of PICtop is
            Send_comm 	: in STD_LOGIC;
            READY 		: out STD_LOGIC;	
            INT          : out STD_LOGIC;
-           INT_ACK      : in STD_LOGIC); -- Esto me va a sacar las interrupciones
+           INT_ACK      : in STD_LOGIC; -- Esto me va a sacar las interrupciones
+           
+           RGB_R        : out STD_LOGIC;
+           RGB_G        : out STD_LOGIC); 
   end component;
   
   component ROM is
@@ -182,8 +188,13 @@ architecture behavior of PICtop is
     signal Send_comm    : STD_LOGIC;    --SEND_Comm
     signal READY        : STD_LOGIC;    --DMA_READY
     
+    --DMA: INT
     signal INT          : STD_LOGIC; --Señal de interrupción
     signal INT_ACK      : STD_LOGIC; --Handshake de la interrupción
+    
+    --DMA: RGB
+ --   signal rgb_r_signal : STD_LOGIC;
+ --   signal rgb_g_signal : STD_LOGIC;
     
     --CPU a RAM
     signal Address_CPU  : STD_LOGIC_VECTOR (7 downto 0); --RAM_Addr
@@ -282,7 +293,10 @@ begin  -- behavior
         Send_comm => Send_comm,
         READY => READY,
         INT => INT, 
-        INT_ACK => INT_ACK);
+        INT_ACK => INT_ACK, 
+        
+        RGB_R => RGB_R,
+        RGB_G => RGB_G);
       
     ROM_PHY: ROM
      port map(

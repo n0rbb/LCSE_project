@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date         : Fri Jan  3 12:46:40 2025
+| Date         : Sun Jan  5 13:42:31 2025
 | Host         : DESKTOP-NDA5VSL running 64-bit major release  (build 9200)
 | Command      : report_utilization -file nexys_PIC_utilization_synth.rpt -pb nexys_PIC_utilization_synth.pb
 | Design       : nexys_PIC
@@ -31,13 +31,13 @@ Table of Contents
 +----------------------------+------+-------+------------+-----------+-------+
 |          Site Type         | Used | Fixed | Prohibited | Available | Util% |
 +----------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*                | 1223 |     0 |          0 |     63400 |  1.93 |
-|   LUT as Logic             | 1199 |     0 |          0 |     63400 |  1.89 |
+| Slice LUTs*                | 1225 |     0 |          0 |     63400 |  1.93 |
+|   LUT as Logic             | 1201 |     0 |          0 |     63400 |  1.89 |
 |   LUT as Memory            |   24 |     0 |          0 |     19000 |  0.13 |
 |     LUT as Distributed RAM |   24 |     0 |            |           |       |
 |     LUT as Shift Register  |    0 |     0 |            |           |       |
-| Slice Registers            |  791 |     0 |          0 |    126800 |  0.62 |
-|   Register as Flip Flop    |  790 |     0 |          0 |    126800 |  0.62 |
+| Slice Registers            |  793 |     0 |          0 |    126800 |  0.63 |
+|   Register as Flip Flop    |  792 |     0 |          0 |    126800 |  0.62 |
 |   Register as Latch        |    1 |     0 |          0 |    126800 | <0.01 |
 | F7 Muxes                   |   88 |     0 |          0 |     31700 |  0.28 |
 | F8 Muxes                   |   40 |     0 |          0 |     15850 |  0.25 |
@@ -60,7 +60,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 6     |          Yes |           - |          Set |
-| 576   |          Yes |           - |        Reset |
+| 578   |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
 | 209   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
@@ -95,7 +95,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +-----------------------------+------+-------+------------+-----------+-------+
 |          Site Type          | Used | Fixed | Prohibited | Available | Util% |
 +-----------------------------+------+-------+------------+-----------+-------+
-| Bonded IOB                  |   36 |     0 |          0 |       210 | 17.14 |
+| Bonded IOB                  |   38 |     0 |          0 |       210 | 18.10 |
 | Bonded IPADs                |    0 |     0 |          0 |         2 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |          0 |         6 |  0.00 |
 | PHASER_REF                  |    0 |     0 |          0 |         6 |  0.00 |
@@ -151,17 +151,17 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT6     |  863 |                 LUT |
-| FDCE     |  575 |        Flop & Latch |
+| LUT6     |  851 |                 LUT |
+| FDCE     |  577 |        Flop & Latch |
 | FDRE     |  209 |        Flop & Latch |
-| LUT2     |  146 |                 LUT |
-| LUT4     |  142 |                 LUT |
+| LUT4     |  149 |                 LUT |
+| LUT2     |  148 |                 LUT |
 | MUXF7    |   88 |               MuxFx |
-| LUT5     |   70 |                 LUT |
-| LUT3     |   62 |                 LUT |
+| LUT5     |   82 |                 LUT |
+| LUT3     |   63 |                 LUT |
 | MUXF8    |   40 |               MuxFx |
 | CARRY4   |   37 |          CarryLogic |
-| OBUF     |   25 |                  IO |
+| OBUF     |   27 |                  IO |
 | RAMS64E  |   24 |  Distributed Memory |
 | OBUFT    |    8 |                  IO |
 | LUT1     |    6 |                 LUT |

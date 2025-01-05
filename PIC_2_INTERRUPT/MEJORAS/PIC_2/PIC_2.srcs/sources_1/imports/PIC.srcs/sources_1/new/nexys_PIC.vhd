@@ -42,6 +42,10 @@ entity nexys_PIC is
     SW                 : in   STD_LOGIC_VECTOR(15 downto 0);    
     LED                : out  STD_LOGIC_VECTOR(15 downto 0);   
 
+-- LED RGB
+    LED16_R              : out STD_LOGIC;
+    LED16_G              : out STD_LOGIC;
+
 -- Reloj de la FPGA
     CLK100MHZ        : in   STD_LOGIC
 
@@ -75,6 +79,9 @@ architecture a_behavior of nexys_PIC is
         switches    : out std_logic_vector(7 downto 0);   -- Switch status bargraph
         Temp_L      : out std_logic_vector(6 downto 0);   -- Display value for TL
         Temp_H      : out std_logic_vector(6 downto 0);  -- Display value for TH
+        
+        RGB_R       : out std_logic;
+        RGB_G       : out std_logic;
       
         StopBit     : in std_logic);
       end component;
@@ -88,6 +95,7 @@ architecture a_behavior of nexys_PIC is
 
 -- signals for UUT (PICtop) 
     signal switches  : std_logic_vector(7 downto 0); 
+    signal rgb_r_signal, rgb_g_signal : std_logic;
     signal RD, TD  : std_logic;  
     signal Temp_H, Temp_L     : std_logic_vector(6 downto 0);
     
@@ -104,14 +112,15 @@ begin
 --     i_write_en <= BTNL;      -- Button LEFT   => Write RAM position 
 --     i_oe <= BTNR;       -- Button RIGHT  => Read RAM position
 --     i_send <= BTNC;          -- Button CENTER => Send RAM positions 4-5
-     StopBit <= SW(12); --Switch de la izquierda para escoger el bit
+     StopBit <= SW(15); --Switch de la izquierda para escoger el bit
 
 -- 2.Datos de entrada y salida
      LED(15 downto 8) <= switches;
 --     LED(7 downto 0) <= i_data_out;    -- Lower LED byte => Show the data written to/read from the RAM 
 --     i_data_in <= SW(7 downto 0);      -- Lower  SW byte => Data to be written to the RAM
 --     i_address <= SW(15 downto 8);     -- Upper  SW byte => RAM read/write address 
-
+     LED16_R <= rgb_r_signal;
+     LED16_G <= rgb_g_signal;
 -- 3a.Realimentaci�n lineas TD => RD  (necesita un cable entre los pines 1 y 2 del pmodJA)
 --     JA(1) <= TD;   -- OUTPUT PORT     
 --    JA(2) <= 'Z';   -- OUTPUT PORT
@@ -154,6 +163,9 @@ begin
         switches   => switches,
         Temp_L     => Temp_L,
         Temp_H     => Temp_H, 
+        
+        RGB_R      => rgb_r_signal,
+        RGB_G      => rgb_g_signal,
        
         StopBit => StopBit);
 
