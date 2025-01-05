@@ -19,6 +19,8 @@ entity PICtop is
     switches    : out std_logic_vector(7 downto 0);   -- Switch status bargraph
     Temp_L      : out std_logic_vector(6 downto 0);   -- Display value for TL
     Temp_H      : out std_logic_vector(6 downto 0);  -- Display value for TH
+    Temp_F_L      : out std_logic_vector(6 downto 0);  
+    Temp_F_H      : out std_logic_vector(6 downto 0);
     
     RGB_R_DUTY       : out integer;
     RGB_G_DUTY       : out integer;
@@ -74,7 +76,9 @@ architecture behavior of PICtop is
       
       Switches : out std_logic_vector(7 downto 0);
       Temp_L   : out std_logic_vector(6 downto 0);
-      Temp_H   : out std_logic_vector(6 downto 0));
+      Temp_H   : out std_logic_vector(6 downto 0);
+      Temp_F_L : out std_logic_vector(6 downto 0);  
+      Temp_F_H : out std_logic_vector(6 downto 0));
   end component;
   
   ------------------------------------------------------------------------
@@ -272,7 +276,9 @@ begin  -- behavior
         
         Switches => switches,
         Temp_L   => Temp_L,
-        Temp_H   => Temp_H );
+        Temp_H   => Temp_H, 
+        Temp_F_L   => Temp_F_L,
+        Temp_F_H   => Temp_F_H);
         
    DMA_PHY: DMA
     port map (

@@ -78,7 +78,9 @@ architecture a_behavior of nexys_PIC is
         RS232_TX    : out std_logic;           -- RS232 TX line
         switches    : out std_logic_vector(7 downto 0);   -- Switch status bargraph
         Temp_L      : out std_logic_vector(6 downto 0);   -- Display value for TL
-        Temp_H      : out std_logic_vector(6 downto 0);  -- Display value for TH
+        Temp_H      : out std_logic_vector(6 downto 0);  
+        Temp_F_L      : out std_logic_vector(6 downto 0);   
+        Temp_F_H      : out std_logic_vector(6 downto 0);
         
         RGB_R_DUTY       : out integer;
         RGB_G_DUTY       : out integer;
@@ -93,18 +95,31 @@ architecture a_behavior of nexys_PIC is
     signal reset, reset_p : std_logic;
     signal clk : std_logic;
     signal contador : unsigned(31 downto 0); 
-    signal rgb_counter : integer;
+    
     --signal flag : std_logic;
     signal CPU_Reset_signal, CPU_Reset_flag : std_logic;
 
+
 -- signals for UUT (PICtop) 
     signal switches  : std_logic_vector(7 downto 0); 
-   -- signal rgb_r_signal, rgb_g_signal : std_logic; Obsoleto
-    signal rgb_r_duty, rgb_g_duty: integer;
     signal RD, TD  : std_logic;  
-    signal Temp_H, Temp_L     : std_logic_vector(6 downto 0);
+
+-- signals for RGB PWM    
+    signal rgb_counter : integer;
+    signal rgb_r_duty, rgb_g_duty: integer;
+    
+--signals for them displays
+    signal measure : std_logic_vector(6 downto 0); 
+    
+    signal degree : std_logic_vector(6 downto 0);   
+    signal Temp_H, Temp_L  : std_logic_vector(6 downto 0);
+    signal Temp_H_f, Temp_L_f : std_logic_vector(6 downto 0);
+    signal temp_H_picked, temp_L_picked : std_logic_vector(6 downto 0);
+    signal selectdisp : std_logic_vector(1 downto 0);
+    signal ToggleFC : std_logic;
     
     signal StopBit : std_logic;
+    
 -- signals to access directly to the RAM  
 --    signal i_address, i_data_in, i_data_out, databus  : std_logic_vector(7 downto 0); 
 --    signal i_write_en, i_oe : std_logic;  
@@ -118,7 +133,9 @@ begin
 --     i_oe <= BTNR;       -- Button RIGHT  => Read RAM position
 --     i_send <= BTNC;          -- Button CENTER => Send RAM positions 4-5
      StopBit <= SW(15); --Switch de la izquierda para escoger el bit
-
+     ToggleFC <= SW(14);
+     
+     
 -- 2.Datos de entrada y salida
      LED(15 downto 8) <= switches;
 --     LED(7 downto 0) <= i_data_out;    -- Lower LED byte => Show the data written to/read from the RAM 
@@ -136,15 +153,47 @@ begin
      RD <= UART_TXD_IN;
 
 -- 4.Displays: Muestra el valor de la temperatura en los dos displays inferiores, y anula los otros 6. 
-    CA <= not(temp_H(0)) when contador(16)='1' else not(temp_L(0));
-    CB <= not(temp_H(1)) when contador(16)='1' else not(temp_L(1));
-    CC <= not(temp_H(2)) when contador(16)='1' else not(temp_L(2));
-    CD <= not(temp_H(3)) when contador(16)='1' else not(temp_L(3));
-    CE <= not(temp_H(4)) when contador(16)='1' else not(temp_L(4));
-    CF <= not(temp_H(5)) when contador(16)='1' else not(temp_L(5));
-    CG <= not(temp_H(6)) when contador(16)='1' else not(temp_L(6));
-    DP <= '1' when contador(16)='1' else '0';
-    AN <= "111111" & not(contador(16)) & (contador(16));
+    selectdisp <= contador(16) & contador(15);
+    degree <= "1100011";
+    measure <= "0111001" when ToggleFC = '0' else "1110001";
+    temp_H_picked <= Temp_H when ToggleFC = '0' else Temp_H_f;
+    temp_L_picked <= Temp_L when ToggleFC = '0' else Temp_L_f;
+    
+    CA <= not(temp_H_picked(0)) when selectdisp = "10" else 
+          not(temp_L_picked(0)) when selectdisp = "00" else
+          not(degree(0)) when selectdisp = "01" else
+          not(measure(0)) when selectdisp = "11";
+    CB <= not(temp_H_picked(1)) when selectdisp = "10" else 
+          not(temp_L_picked(1)) when selectdisp = "00" else
+          not(degree(1)) when selectdisp = "01" else
+          not(measure(1)) when selectdisp = "11";
+    CC <= not(temp_H_picked(2)) when selectdisp = "10" else 
+          not(temp_L_picked(2)) when selectdisp = "00" else
+          not(degree(2)) when selectdisp = "01" else
+          not(measure(2)) when selectdisp = "11";
+    CD <= not(temp_H_picked(3)) when selectdisp = "10" else 
+          not(temp_L_picked(3)) when selectdisp = "00" else
+          not(degree(3)) when selectdisp = "01" else
+          not(measure(3)) when selectdisp = "11";
+    CE <= not(temp_H_picked(4)) when selectdisp = "10" else 
+          not(temp_L_picked(4)) when selectdisp = "00" else
+          not(degree(4)) when selectdisp = "01" else
+          not(measure(4)) when selectdisp = "11";
+    CF <= not(temp_H_picked(5)) when selectdisp = "10" else 
+          not(temp_L_picked(5)) when selectdisp = "00" else
+          not(degree(5)) when selectdisp = "01" else
+          not(measure(5)) when selectdisp = "11";
+    CG <= not(temp_H_picked(6)) when selectdisp = "10" else 
+          not(temp_L_picked(6)) when selectdisp = "00" else
+          not(degree(6)) when selectdisp = "01" else
+          not(measure(6)) when selectdisp = "11";
+    
+    DP <= '0' when (selectdisp = "00") else '1';
+    AN <= "1111" & 
+          not(selectdisp(1) and not(selectdisp(0))) & 
+          (selectdisp(1) or selectdisp(0)) & 
+          not(not(selectdisp(1)) and selectdisp(0)) & 
+          not(selectdisp(1) and selectdisp(0));
 
 
 -- 5.Instanciaci�n de los componentes 
@@ -168,6 +217,8 @@ begin
         switches   => switches,
         Temp_L     => Temp_L,
         Temp_H     => Temp_H, 
+        Temp_F_L     => Temp_L_f,
+        Temp_F_H     => Temp_H_f, 
         
         RGB_R_DUTY      => rgb_r_duty,
         RGB_G_DUTY      => rgb_g_duty,

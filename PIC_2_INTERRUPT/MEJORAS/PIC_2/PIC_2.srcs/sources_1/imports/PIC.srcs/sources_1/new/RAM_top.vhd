@@ -14,7 +14,9 @@ entity RAM_top is
         databus  : inout std_logic_vector(7 downto 0);
         Switches : out   std_logic_vector(7 downto 0);
         Temp_L   : out   std_logic_vector(6 downto 0);
-        Temp_H   : out   std_logic_vector(6 downto 0)
+        Temp_H   : out   std_logic_vector(6 downto 0);
+        Temp_F_L   : out   std_logic_vector(6 downto 0);
+        Temp_F_H   : out   std_logic_vector(6 downto 0)
     );
 end RAM_top;
 
@@ -48,7 +50,9 @@ architecture behavior of RAM_top is
             databus  : inout std_logic_vector(7 downto 0);
             Switches : out   std_logic_vector(7 downto 0);
             Temp_L   : out   std_logic_vector(6 downto 0);
-            Temp_H   : out   std_logic_vector(6 downto 0)      
+            Temp_H   : out   std_logic_vector(6 downto 0);   
+            Temp_F_L   : out   std_logic_vector(6 downto 0);
+            Temp_F_H   : out   std_logic_vector(6 downto 0)  
         );
     end component;
 
@@ -75,7 +79,9 @@ architecture behavior of RAM_top is
             databus     => databus,
             Switches    => Switches,
             Temp_L      => Temp_L,
-            Temp_H      => Temp_H
+            Temp_H      => Temp_H, 
+            Temp_F_L    => Temp_F_L,
+            Temp_F_H    => Temp_F_H
         );
 
 

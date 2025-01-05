@@ -22,13 +22,25 @@ PORT(
    databus  : inout std_logic_vector(7 downto 0);
    Switches : out   std_logic_vector(7 downto 0);
    Temp_L   : out   std_logic_vector(6 downto 0);
-   Temp_H   : out   std_logic_vector(6 downto 0));
+   Temp_H   : out   std_logic_vector(6 downto 0); 
+   
+   Temp_F_L   : out   std_logic_vector(6 downto 0);
+   Temp_F_H   : out   std_logic_vector(6 downto 0));
 end RAM_ES;
 
 architecture Behavioral of RAM_ES is
     signal contents_ram : array8_ram(63 downto 0);
     attribute dont_touch : string;
     attribute dont_touch of contents_ram : signal is "true";
+    
+    --Señales para convertir a Fahrenheit
+    signal Temp_H_C_int : integer;
+    signal Temp_L_C_int : integer;
+    signal Temp_C : integer;
+    
+    signal Temp_H_F_int : integer;
+    signal Temp_L_F_int : integer;
+    signal Temp_F : integer;
 begin
 
 p_ram : process (reset, clk)  -- sí reset
@@ -72,6 +84,69 @@ Switches(6) <= contents_ram(to_integer(unsigned(SWITCH_BASE)) + 6)(0);
 Switches(7) <= contents_ram(to_integer(unsigned(SWITCH_BASE)) + 7)(0); --Sintaxis horrible
 
 -- Meto los dos dígitos de temperatura
+
+
+--PARTE DE CONVERSIÓN A FAHRENHEIT
+
+with contents_ram(to_integer(unsigned(T_STAT)))(7 downto 4) select
+    Temp_H_C_int <=
+        0 when "0000",  -- 0
+        1 when "0001",  -- 1
+        2 when "0010",  -- 2
+        3 when "0011",  -- 3
+        4 when "0100",  -- 4
+        5 when "0101",  -- 5
+        6 when "0110",  -- 6
+        7 when "0111",  -- 7
+        8 when "1000",  -- 8
+        9 when "1001",  -- 9
+        0 when others;  -- E (error)
+        
+with contents_ram(to_integer(unsigned(T_STAT)))(3 downto 0) select
+    Temp_L_C_int <=
+        0 when "0000",  -- 0
+        1 when "0001",  -- 1
+        2 when "0010",  -- 2
+        3 when "0011",  -- 3
+        4 when "0100",  -- 4
+        5 when "0101",  -- 5
+        6 when "0110",  -- 6
+        7 when "0111",  -- 7
+        8 when "1000",  -- 8
+        9 when "1001",  -- 9
+        0 when others;  -- E (error)
+
+Temp_C <= (Temp_H_C_int * 10) + Temp_L_C_int;
+Temp_F <= (Temp_C) * 9/5 + 32; --Valor máximo 84
+--Convierto a 7 segmentos directamente
+
+with (Temp_F/10) select
+    Temp_F_H <= 
+        "0111111" when 0,  
+        "0000110" when 1,  
+        "1011011" when 2,  
+        "1001111" when 3,  
+        "1100110" when 4,  
+        "1101101" when 5,  
+        "1111101" when 6,  
+        "0000111" when 7,  
+        "1111111" when 8,  
+        "1101111" when 9,  
+        "1111001" when others;  -- E (error)
+
+with (Temp_F rem 10) select
+    Temp_F_L <= 
+        "0111111" when 0,  
+        "0000110" when 1,  
+        "1011011" when 2,  
+        "1001111" when 3,  
+        "1100110" when 4,  
+        "1101101" when 5,  
+        "1111101" when 6,  
+        "0000111" when 7,  
+        "1111111" when 8,  
+        "1101111" when 9,  
+        "1111001" when others;  -- E (error)
 -------------------------------------------------------------------------
 -- Decodificador de BCD a 7 segmentos
 -------------------------------------------------------------------------
@@ -89,7 +164,7 @@ with contents_ram(to_integer(unsigned(T_STAT)))(7 downto 4) select
         "1101111" when "1001",  -- 9
         "1111001" when others;  -- E (error)
         
-    with contents_ram(to_integer(unsigned(T_STAT)))(3 downto 0) select
+with contents_ram(to_integer(unsigned(T_STAT)))(3 downto 0) select
     Temp_L <=
         "0111111" when "0000",  -- 0
         "0000110" when "0001",  -- 1
