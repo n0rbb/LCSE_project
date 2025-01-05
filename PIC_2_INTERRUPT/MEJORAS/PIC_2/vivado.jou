@@ -23,3 +23,30 @@
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -url localhost:3121 -allow_non_jtag
+disconnect_hw_server localhost:3121
+connect_hw_server -url localhost:3121 -allow_non_jtag
+current_hw_target [get_hw_targets */xilinx_tcf/Digilent/210292AA7602A]
+set_property PARAM.FREQUENCY 15000000 [get_hw_targets */xilinx_tcf/Digilent/210292AA7602A]
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.runs/impl_1/nexys_PIC.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.runs/impl_1/nexys_PIC.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.runs/impl_1/nexys_PIC.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]

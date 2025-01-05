@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1736117817" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/nexys_PIC.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1736119954" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/nexys_PIC.dcp">
   <File Type="PA-TCL" Name="nexys_PIC.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="nexys_PIC_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="nexys_PIC_reports.tcl"/>

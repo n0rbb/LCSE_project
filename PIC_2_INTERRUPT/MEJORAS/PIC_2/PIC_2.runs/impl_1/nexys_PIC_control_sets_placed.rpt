@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date         : Sun Jan  5 23:59:56 2025
+| Date         : Mon Jan  6 00:35:16 2025
 | Host         : DESKTOP-NDA5VSL running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file nexys_PIC_control_sets_placed.rpt
 | Design       : nexys_PIC
@@ -77,17 +77,17 @@ Table of Contents
 |  clk_20MHz/inst/clk_out1             |                                                                                                            | UUT/ALU_PHY/FlagZ_r_reg_LDC_i_2_n_0 |                1 |              1 |         1.00 |
 |  clk_20MHz/inst/clk_out1             | UUT/CPU_PHY/INT_ACK_flag_reg_0                                                                             | UUT/ALU_PHY/FlagZ_r_reg_LDC_i_1_n_0 |                1 |              1 |         1.00 |
 |  clk_20MHz/inst/clk_out1             |                                                                                                            |                                     |                2 |              4 |         2.00 |
+|  clk_20MHz/inst/clk_out1             | UUT/CPU_PHY/FSM_sequential_current_state[3]_i_1_n_0                                                        | UUT/RAM_PHY/AR[0]                   |                3 |              4 |         1.33 |
 |  clk_20MHz/inst/clk_out1             | UUT/RS232_PHY/Receiver/DataCount                                                                           | UUT/RAM_PHY/AR[0]                   |                1 |              4 |         4.00 |
 |  clk_20MHz/inst/clk_out1             | UUT/RS232_PHY/Transmitter/data_count                                                                       | UUT/RAM_PHY/AR[0]                   |                1 |              4 |         4.00 |
-|  clk_20MHz/inst/clk_out1             | UUT/CPU_PHY/FSM_sequential_current_state[3]_i_1_n_0                                                        | UUT/RAM_PHY/AR[0]                   |                3 |              4 |         1.33 |
 |                                      |                                                                                                            | CA_reg_i_2_n_0                      |                3 |              7 |         2.33 |
-|  clk_20MHz/inst/clk_out1             | UUT/DMA_PHY/TX_Data[7]_i_1_n_0                                                                             | UUT/RAM_PHY/AR[0]                   |                3 |              8 |         2.67 |
+|  clk_20MHz/inst/clk_out1             | UUT/CPU_PHY/E[0]                                                                                           | UUT/RAM_PHY/AR[0]                   |                2 |              8 |         4.00 |
+|  clk_20MHz/inst/clk_out1             | UUT/CPU_PHY/INS_reg_reg[0]_4[0]                                                                            | UUT/RAM_PHY/AR[0]                   |                5 |              8 |         1.60 |
+|  clk_20MHz/inst/clk_out1             | UUT/CPU_PHY/INS_reg_reg[7]_1[0]                                                                            | UUT/RAM_PHY/AR[0]                   |                5 |              8 |         1.60 |
 |  clk_20MHz/inst/clk_out1             | UUT/RS232_PHY/Receiver/E[0]                                                                                | UUT/RAM_PHY/AR[0]                   |                2 |              8 |         4.00 |
 |  clk_20MHz/inst/clk_out1             | UUT/RS232_PHY/Transmitter/E[0]                                                                             | UUT/RAM_PHY/AR[0]                   |                3 |              8 |         2.67 |
 |  clk_20MHz/inst/clk_out1             | UUT//contents_ram_reg_0_63_0_0_i_1_n_0                                                                     |                                     |                2 |              8 |         4.00 |
-|  clk_20MHz/inst/clk_out1             | UUT/CPU_PHY/E[0]                                                                                           | UUT/RAM_PHY/AR[0]                   |                2 |              8 |         4.00 |
-|  clk_20MHz/inst/clk_out1             | UUT/CPU_PHY/INS_reg_reg[7]_1[0]                                                                            | UUT/RAM_PHY/AR[0]                   |                5 |              8 |         1.60 |
-|  clk_20MHz/inst/clk_out1             | UUT/CPU_PHY/INS_reg_reg[0]_4[0]                                                                            | UUT/RAM_PHY/AR[0]                   |                5 |              8 |         1.60 |
+|  clk_20MHz/inst/clk_out1             | UUT/DMA_PHY/TX_Data[7]_i_1_n_0                                                                             | UUT/RAM_PHY/AR[0]                   |                3 |              8 |         2.67 |
 |  clk_20MHz/inst/clk_out1             | UUT/RS232_PHY/Internal_memory/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/E[0] | UUT/RAM_PHY/AR[0]                   |                3 |             12 |         4.00 |
 |  clk_20MHz/inst/clk_out1             | UUT/RS232_PHY/Internal_memory/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/E[0] | UUT/RAM_PHY/AR[0]                   |                3 |             12 |         4.00 |
 |  clk_20MHz/inst/clk_out1             | UUT/CPU_PHY/INS_reg_reg[0]_6                                                                               |                                     |                4 |             16 |         4.00 |
