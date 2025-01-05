@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date             : Sun Jan  5 14:46:55 2025
+| Date             : Sun Jan  5 20:28:12 2025
 | Host             : DESKTOP-NDA5VSL running 64-bit major release  (build 9200)
 | Command          : report_power -file nexys_PIC_power_routed.rpt -pb nexys_PIC_power_summary_routed.pb -rpx nexys_PIC_power_routed.rpx
 | Design           : nexys_PIC
@@ -30,7 +30,7 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.213        |
+| Total On-Chip Power (W)  | 0.212        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
 | Dynamic (W)              | 0.115        |
@@ -53,19 +53,19 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.001 |        8 |       --- |             --- |
-| Slice Logic              |    <0.001 |     2498 |       --- |             --- |
-|   LUT as Logic           |    <0.001 |     1283 |     63400 |            2.02 |
+| Slice Logic              |    <0.001 |     2511 |       --- |             --- |
+|   LUT as Logic           |    <0.001 |     1294 |     63400 |            2.04 |
 |   CARRY4                 |    <0.001 |       58 |     15850 |            0.37 |
-|   Register               |    <0.001 |      854 |    126800 |            0.67 |
+|   Register               |    <0.001 |      856 |    126800 |            0.68 |
 |   F7/F8 Muxes            |    <0.001 |      128 |     63400 |            0.20 |
 |   LUT as Distributed RAM |    <0.001 |       24 |     19000 |            0.13 |
 |   Others                 |     0.000 |       21 |       --- |             --- |
-| Signals                  |    <0.001 |     1483 |       --- |             --- |
+| Signals                  |    <0.001 |     1492 |       --- |             --- |
 | Block RAM                |    <0.001 |      0.5 |       135 |            0.37 |
 | MMCM                     |     0.112 |        1 |         6 |           16.67 |
 | I/O                      |     0.001 |       39 |       210 |           18.57 |
 | Static Power             |     0.097 |          |           |                 |
-| Total                    |     0.213 |          |           |                 |
+| Total                    |     0.212 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -150,7 +150,7 @@ Table of Contents
 | Name        | Power (W) |
 +-------------+-----------+
 | nexys_PIC   |     0.115 |
-|   UUT       |     0.001 |
+|   UUT       |     0.002 |
 |   clk_20MHz |     0.112 |
 |     inst    |     0.112 |
 +-------------+-----------+

@@ -37,216 +37,246 @@ constant W13  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_CONSTAN
 constant W14  : std_logic_vector(11 downto 0) := X"041";
 constant W15  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_CMPE;
 constant W16  : std_logic_vector(11 downto 0) :=X"0" & TYPE_2 & JMP_COND;
-constant W17  : std_logic_vector(11 downto 0) :=X"045";
+constant W17  : std_logic_vector(11 downto 0) :=X"04C";
 constant W18  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_CONSTANT & DST_B;
 constant W19  : std_logic_vector(11 downto 0) := X"049";
 constant W20  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_CMPE;
 constant W21  : std_logic_vector(11 downto 0) :=X"0" & TYPE_2 & JMP_COND;
-constant W22  : std_logic_vector(11 downto 0) :=X"02E";
+constant W22  : std_logic_vector(11 downto 0) :=X"035";
 constant W23  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_CONSTANT & DST_B;
 constant W24  : std_logic_vector(11 downto 0) := X"054";
 constant W25  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_CMPE;
 constant W26  : std_logic_vector(11 downto 0) :=X"0" & TYPE_2 & JMP_COND;
-constant W27  : std_logic_vector(11 downto 0) :=X"05C";
+constant W27  : std_logic_vector(11 downto 0) :=X"063";
 constant W28  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_CONSTANT & DST_B;
 constant W29  : std_logic_vector(11 downto 0) := X"053";
 constant W30  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_CMPE;
 constant W31  : std_logic_vector(11 downto 0) :=X"0" & TYPE_2 & JMP_COND;
-constant W32  : std_logic_vector(11 downto 0) :=X"07E";
-constant W33  : std_logic_vector(11 downto 0) :=X"0" & TYPE_2 & JMP_UNCOND;
-constant W34  : std_logic_vector(11 downto 0) :=X"0D6";
-constant W35  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_CONSTANT & DST_ACC;
-constant W36  : std_logic_vector(11 downto 0) := X"03B"; --: (O es 4F)
-constant W37  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & WR & SRC_ACC & DST_MEM;
-constant W38  : std_logic_vector(11 downto 0) := X"004";
-constant W39  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_CONSTANT & DST_ACC;
-constant W40  : std_logic_vector(11 downto 0) := X"029"; --) (K es 4B)
-constant W41  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & WR & SRC_ACC & DST_MEM;
-constant W42  : std_logic_vector(11 downto 0) := X"005";
-constant W43  : std_logic_vector(11 downto 0) :=X"0" & TYPE_4 & "000000";
-constant W44  : std_logic_vector(11 downto 0) :=X"0" & TYPE_2 & RETI;
-constant W45  : std_logic_vector(11 downto 0) :=X"000";
-constant W46  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_MEM & DST_A;
-constant W47  : std_logic_vector(11 downto 0) := X"001";
-constant W48  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_ASCII2BIN;
-constant W49  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_ACC & DST_INDX;
-constant W50  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_ACC & DST_A;
-constant W51  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_CONSTANT & DST_B;
-constant W52  : std_logic_vector(11 downto 0) := X"007";
-constant W53  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_CMPG;
-constant W54  : std_logic_vector(11 downto 0) :=X"0" & TYPE_2 & JMP_COND;
-constant W55  : std_logic_vector(11 downto 0) :=X"0D6";
-constant W56  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_MEM & DST_A;
-constant W57  : std_logic_vector(11 downto 0) := X"002";
-constant W58  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_ASCII2BIN;
-constant W59  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_ACC & DST_A;
-constant W60  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_CONSTANT & DST_B;
-constant W61  : std_logic_vector(11 downto 0) := X"001";
-constant W62  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_CMPG;
-constant W63  : std_logic_vector(11 downto 0) :=X"0" & TYPE_2 & JMP_COND;
-constant W64  : std_logic_vector(11 downto 0) :=X"0D6";
-constant W65  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & WR & SRC_ACC & DST_INDXD_MEM;
-constant W66  : std_logic_vector(11 downto 0) := X"010";
-constant W67  : std_logic_vector(11 downto 0) :=X"0" & TYPE_2 & JMP_UNCOND;
-constant W68  : std_logic_vector(11 downto 0) :=X"023";
-constant W69  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_MEM & DST_A;
-constant W70  : std_logic_vector(11 downto 0) := X"001";
-constant W71  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_ASCII2BIN;
-constant W72  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_ACC & DST_A;
-constant W73  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_ACC & DST_INDX;
-constant W74  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_CONSTANT & DST_B;
-constant W75  : std_logic_vector(11 downto 0) := X"0FF";
-constant W76  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_CMPE;
-constant W77  : std_logic_vector(11 downto 0) :=X"0" & TYPE_2 & JMP_COND;
-constant W78  : std_logic_vector(11 downto 0) :=X"0D6";
-constant W79  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_MEM & DST_A;
-constant W80  : std_logic_vector(11 downto 0) := X"002";
-constant W81  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_ASCII2BIN;
-constant W82  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_ACC & DST_A;
-constant W83  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_CONSTANT & DST_B;
-constant W84  : std_logic_vector(11 downto 0) := X"009";
-constant W85  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_CMPG;
-constant W86  : std_logic_vector(11 downto 0) :=X"0" & TYPE_2 & JMP_COND;
-constant W87  : std_logic_vector(11 downto 0) :=X"0D6";
-constant W88  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & WR & SRC_ACC & DST_INDXD_MEM;
-constant W89  : std_logic_vector(11 downto 0) := X"020";
-constant W90  : std_logic_vector(11 downto 0) :=X"0" & TYPE_2 & JMP_UNCOND;
-constant W91  : std_logic_vector(11 downto 0) :=X"023";
-constant W92  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_MEM & DST_A;
-constant W93  : std_logic_vector(11 downto 0) := X"001";
-constant W94  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_ASCII2BIN;
-constant W95  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_ACC & DST_A;
-constant W96  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_CONSTANT & DST_B;
-constant W97  : std_logic_vector(11 downto 0) := X"002";
-constant W98  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_CMPG;
-constant W99  : std_logic_vector(11 downto 0) :=X"0" & TYPE_2 & JMP_COND;
-constant W100  : std_logic_vector(11 downto 0) :=X"0D6";
-constant W101  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_CONSTANT & DST_B;
-constant W102  : std_logic_vector(11 downto 0) := X"000";
-constant W103  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_ADD;
-constant W104  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_SHIFTL;
-constant W105  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_SHIFTL;
-constant W106  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_SHIFTL;
-constant W107  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_SHIFTL;
-constant W108  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & WR & SRC_ACC & DST_MEM;
-constant W109  : std_logic_vector(11 downto 0) := X"041";
-constant W110  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_MEM & DST_A;
-constant W111  : std_logic_vector(11 downto 0) := X"002";
-constant W112  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_ASCII2BIN;
-constant W113  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_ACC & DST_A;
-constant W114  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_CONSTANT & DST_B;
-constant W115  : std_logic_vector(11 downto 0) := X"0FF";
-constant W116  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_CMPE;
-constant W117  : std_logic_vector(11 downto 0) :=X"0" & TYPE_2 & JMP_COND;
-constant W118  : std_logic_vector(11 downto 0) :=X"0D6";
-constant W119  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_MEM & DST_B;
-constant W120  : std_logic_vector(11 downto 0) := X"041";
-constant W121  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_ADD;
-constant W122  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & WR & SRC_ACC & DST_MEM;
-constant W123  : std_logic_vector(11 downto 0) := X"031";
-constant W124  : std_logic_vector(11 downto 0) :=X"0" & TYPE_2 & JMP_UNCOND;
-constant W125  : std_logic_vector(11 downto 0) :=X"023";
-constant W126  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_MEM & DST_A;
-constant W127  : std_logic_vector(11 downto 0) := X"001";
-constant W128  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_CONSTANT & DST_B;
-constant W129  : std_logic_vector(11 downto 0) := X"041";
-constant W130  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_CMPE;
-constant W131  : std_logic_vector(11 downto 0) :=X"0" & TYPE_2 & JMP_COND;
-constant W132  : std_logic_vector(11 downto 0) :=X"091";
-constant W133  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_CONSTANT & DST_B;
-constant W134  : std_logic_vector(11 downto 0) := X"049";
-constant W135  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_CMPE;
-constant W136  : std_logic_vector(11 downto 0) :=X"0" & TYPE_2 & JMP_COND;
-constant W137  : std_logic_vector(11 downto 0) :=X"0A7";
-constant W138  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_CONSTANT & DST_B;
-constant W139  : std_logic_vector(11 downto 0) := X"054";
-constant W140  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_CMPE;
-constant W141  : std_logic_vector(11 downto 0) :=X"0" & TYPE_2 & JMP_COND;
-constant W142  : std_logic_vector(11 downto 0) :=X"0BD";
-constant W143  : std_logic_vector(11 downto 0) :=X"0" & TYPE_2 & JMP_UNCOND;
-constant W144  : std_logic_vector(11 downto 0) :=X"0D6";
-constant W145  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_MEM & DST_A;
-constant W146  : std_logic_vector(11 downto 0) := X"002";
-constant W147  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_ASCII2BIN;
-constant W148  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_ACC & DST_A;
-constant W149  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_ACC & DST_INDX;
-constant W150  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_CONSTANT & DST_B;
-constant W151  : std_logic_vector(11 downto 0) := X"009";
-constant W152  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_CMPG;
-constant W153  : std_logic_vector(11 downto 0) :=X"0" & TYPE_2 & JMP_COND;
-constant W154  : std_logic_vector(11 downto 0) :=X"0D6";
-constant W155  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_INDXD_MEM & DST_A;
-constant W156  : std_logic_vector(11 downto 0) := X"020";
-constant W157  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_BIN2ASCII;
-constant W158  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & WR & SRC_ACC & DST_MEM;
-constant W159  : std_logic_vector(11 downto 0) := X"005";
-constant W160  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_CONSTANT & DST_ACC;
-constant W161  : std_logic_vector(11 downto 0) := X"041";
-constant W162  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & WR & SRC_ACC & DST_MEM;
-constant W163  : std_logic_vector(11 downto 0) := X"004";
-constant W164  : std_logic_vector(11 downto 0) :=X"0" & TYPE_4 & "000000";
-constant W165  : std_logic_vector(11 downto 0) :=X"0" & TYPE_2 & RETI;
-constant W166  : std_logic_vector(11 downto 0) :=X"000";
-constant W167  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_MEM & DST_A;
-constant W168  : std_logic_vector(11 downto 0) := X"002";
-constant W169  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_ASCII2BIN;
-constant W170  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_ACC & DST_A;
-constant W171  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_ACC & DST_INDX;
-constant W172  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_CONSTANT & DST_B;
-constant W173  : std_logic_vector(11 downto 0) := X"007";
-constant W174  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_CMPG;
-constant W175  : std_logic_vector(11 downto 0) :=X"0" & TYPE_2 & JMP_COND;
-constant W176  : std_logic_vector(11 downto 0) :=X"0D6";
-constant W177  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_INDXD_MEM & DST_A;
-constant W178  : std_logic_vector(11 downto 0) := X"010";
-constant W179  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_BIN2ASCII;
-constant W180  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & WR & SRC_ACC & DST_MEM;
-constant W181  : std_logic_vector(11 downto 0) := X"005";
-constant W182  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_CONSTANT & DST_ACC;
-constant W183  : std_logic_vector(11 downto 0) := X"053";
-constant W184  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & WR & SRC_ACC & DST_MEM;
-constant W185  : std_logic_vector(11 downto 0) := X"004";
-constant W186  : std_logic_vector(11 downto 0) :=X"0" & TYPE_4 & "000000";
-constant W187  : std_logic_vector(11 downto 0) :=X"0" & TYPE_2 & RETI;
-constant W188  : std_logic_vector(11 downto 0) :=X"000";
-constant W189  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_MEM & DST_A;
-constant W190  : std_logic_vector(11 downto 0) := X"031";
-constant W191  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_CONSTANT & DST_B;
-constant W192  : std_logic_vector(11 downto 0) :="000011110000";
-constant W193  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_AND;
-constant W194  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_SHIFTR;
-constant W195  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_SHIFTR;
-constant W196  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_SHIFTR;
-constant W197  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_SHIFTR;
-constant W198  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_ACC & DST_A;
-constant W199  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_BIN2ASCII;
-constant W200  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & WR & SRC_ACC & DST_MEM;
-constant W201  : std_logic_vector(11 downto 0) := X"004";
-constant W202  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_MEM & DST_A;
-constant W203  : std_logic_vector(11 downto 0) := X"031";
-constant W204  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_CONSTANT & DST_B;
-constant W205  : std_logic_vector(11 downto 0) :="000000001111";
-constant W206  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_AND;
-constant W207  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_ACC & DST_A;
-constant W208  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_BIN2ASCII;
-constant W209  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & WR & SRC_ACC & DST_MEM;
-constant W210  : std_logic_vector(11 downto 0) := X"005";
-constant W211  : std_logic_vector(11 downto 0) :=X"0" & TYPE_4 & "000000";
-constant W212  : std_logic_vector(11 downto 0) :=X"0" & TYPE_2 & RETI;
-constant W213  : std_logic_vector(11 downto 0) :=X"000";
-constant W214  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_CONSTANT & DST_ACC;
-constant W215  : std_logic_vector(11 downto 0) := X"045";
+constant W32  : std_logic_vector(11 downto 0) :=X"085";
+--Rutina de comando RST
+constant W33  : std_logic_vector(11 downto 0) := X"0" & TYPE_3 & LD & SRC_MEM & DST_A;
+constant W34  : std_logic_vector(11 downto 0) := X"000";
+constant W35  : std_logic_vector(11 downto 0) := X"0" & TYPE_3 & LD & SRC_CONSTANT & DST_B;
+constant W36  : std_logic_vector(11 downto 0) := X"052";
+constant W37  : std_logic_vector(11 downto 0) := X"0" & TYPE_1 & ALU_CMPE;
+constant W38 : std_logic_vector(11 downto 0) := X"0" & TYPE_2 & JMP_COND;
+constant W39  : std_logic_vector(11 downto 0) := X"0E8"; --PC a 232
+
+constant W40  : std_logic_vector(11 downto 0) :=X"0" & TYPE_2 & JMP_UNCOND;
+constant W41  : std_logic_vector(11 downto 0) :=X"0DD";
+constant W42  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_CONSTANT & DST_ACC;
+constant W43  : std_logic_vector(11 downto 0) := X"03B"; --: (O es 4F)
+constant W44  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & WR & SRC_ACC & DST_MEM;
+constant W45  : std_logic_vector(11 downto 0) := X"004";
+constant W46  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_CONSTANT & DST_ACC;
+constant W47  : std_logic_vector(11 downto 0) := X"029"; --) (K es 4B)
+constant W48  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & WR & SRC_ACC & DST_MEM;
+constant W49  : std_logic_vector(11 downto 0) := X"005";
+constant W50  : std_logic_vector(11 downto 0) :=X"0" & TYPE_4 & "000000";
+constant W51  : std_logic_vector(11 downto 0) :=X"0" & TYPE_2 & RETI;
+constant W52  : std_logic_vector(11 downto 0) :=X"000";
+constant W53  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_MEM & DST_A;
+constant W54  : std_logic_vector(11 downto 0) := X"001";
+constant W55  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_ASCII2BIN;
+constant W56  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_ACC & DST_INDX;
+constant W57  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_ACC & DST_A;
+constant W58  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_CONSTANT & DST_B;
+constant W59  : std_logic_vector(11 downto 0) := X"007";
+constant W60  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_CMPG;
+constant W61  : std_logic_vector(11 downto 0) :=X"0" & TYPE_2 & JMP_COND;
+constant W62  : std_logic_vector(11 downto 0) :=X"0DD";
+constant W63  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_MEM & DST_A;
+constant W64  : std_logic_vector(11 downto 0) := X"002";
+constant W65  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_ASCII2BIN;
+constant W66  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_ACC & DST_A;
+constant W67  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_CONSTANT & DST_B;
+constant W68  : std_logic_vector(11 downto 0) := X"001";
+constant W69  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_CMPG;
+constant W70  : std_logic_vector(11 downto 0) :=X"0" & TYPE_2 & JMP_COND;
+constant W71  : std_logic_vector(11 downto 0) :=X"0DD";
+constant W72  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & WR & SRC_ACC & DST_INDXD_MEM;
+constant W73  : std_logic_vector(11 downto 0) := X"010";
+constant W74  : std_logic_vector(11 downto 0) :=X"0" & TYPE_2 & JMP_UNCOND;
+constant W75  : std_logic_vector(11 downto 0) :=X"02A";
+constant W76  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_MEM & DST_A;
+constant W77  : std_logic_vector(11 downto 0) := X"001";
+constant W78  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_ASCII2BIN;
+constant W79  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_ACC & DST_A;
+constant W80  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_ACC & DST_INDX;
+constant W81  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_CONSTANT & DST_B;
+constant W82  : std_logic_vector(11 downto 0) := X"0FF";
+constant W83  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_CMPE;
+constant W84  : std_logic_vector(11 downto 0) :=X"0" & TYPE_2 & JMP_COND;
+constant W85  : std_logic_vector(11 downto 0) :=X"0DD";
+constant W86  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_MEM & DST_A;
+constant W87  : std_logic_vector(11 downto 0) := X"002";
+constant W88  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_ASCII2BIN;
+constant W89  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_ACC & DST_A;
+constant W90  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_CONSTANT & DST_B;
+constant W91  : std_logic_vector(11 downto 0) := X"009";
+constant W92  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_CMPG;
+constant W93  : std_logic_vector(11 downto 0) :=X"0" & TYPE_2 & JMP_COND;
+constant W94  : std_logic_vector(11 downto 0) :=X"0DD";
+constant W95  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & WR & SRC_ACC & DST_INDXD_MEM;
+constant W96  : std_logic_vector(11 downto 0) := X"020";
+constant W97  : std_logic_vector(11 downto 0) :=X"0" & TYPE_2 & JMP_UNCOND;
+constant W98  : std_logic_vector(11 downto 0) :=X"02A";
+constant W99  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_MEM & DST_A;
+constant W100 : std_logic_vector(11 downto 0) := X"001";
+constant W101 : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_ASCII2BIN;
+constant W102 : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_ACC & DST_A;
+constant W103 : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_CONSTANT & DST_B;
+constant W104 : std_logic_vector(11 downto 0) := X"002";
+constant W105 : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_CMPG;
+constant W106 : std_logic_vector(11 downto 0) :=X"0" & TYPE_2 & JMP_COND;
+constant W107  : std_logic_vector(11 downto 0) :=X"0DD";
+constant W108  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_CONSTANT & DST_B;
+constant W109  : std_logic_vector(11 downto 0) := X"000";
+constant W110  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_ADD;
+constant W111  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_SHIFTL;
+constant W112  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_SHIFTL;
+constant W113  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_SHIFTL;
+constant W114  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_SHIFTL;
+constant W115  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & WR & SRC_ACC & DST_MEM;
+constant W116  : std_logic_vector(11 downto 0) := X"041";
+constant W117  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_MEM & DST_A;
+constant W118  : std_logic_vector(11 downto 0) := X"002";
+constant W119  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_ASCII2BIN;
+constant W120  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_ACC & DST_A;
+constant W121  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_CONSTANT & DST_B;
+constant W122  : std_logic_vector(11 downto 0) := X"0FF";
+constant W123  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_CMPE;
+constant W124  : std_logic_vector(11 downto 0) :=X"0" & TYPE_2 & JMP_COND;
+constant W125  : std_logic_vector(11 downto 0) :=X"0DD";
+constant W126  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_MEM & DST_B;
+constant W127  : std_logic_vector(11 downto 0) := X"041";
+constant W128  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_ADD;
+constant W129  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & WR & SRC_ACC & DST_MEM;
+constant W130  : std_logic_vector(11 downto 0) := X"031";
+constant W131  : std_logic_vector(11 downto 0) :=X"0" & TYPE_2 & JMP_UNCOND;
+constant W132  : std_logic_vector(11 downto 0) :=X"02A";
+constant W133  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_MEM & DST_A;
+constant W134  : std_logic_vector(11 downto 0) := X"001";
+constant W135  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_CONSTANT & DST_B;
+constant W136  : std_logic_vector(11 downto 0) := X"041";
+constant W137  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_CMPE;
+constant W138  : std_logic_vector(11 downto 0) :=X"0" & TYPE_2 & JMP_COND;
+constant W139  : std_logic_vector(11 downto 0) :=X"098";
+constant W140  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_CONSTANT & DST_B;
+constant W141  : std_logic_vector(11 downto 0) := X"049";
+constant W142  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_CMPE;
+constant W143  : std_logic_vector(11 downto 0) :=X"0" & TYPE_2 & JMP_COND;
+constant W144  : std_logic_vector(11 downto 0) :=X"0AE";
+constant W145  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_CONSTANT & DST_B;
+constant W146  : std_logic_vector(11 downto 0) := X"054";
+constant W147  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_CMPE;
+constant W148  : std_logic_vector(11 downto 0) :=X"0" & TYPE_2 & JMP_COND;
+constant W149  : std_logic_vector(11 downto 0) :=X"0C4";
+constant W150  : std_logic_vector(11 downto 0) :=X"0" & TYPE_2 & JMP_UNCOND;
+constant W151  : std_logic_vector(11 downto 0) :=X"0DD";
+constant W152  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_MEM & DST_A;
+constant W153  : std_logic_vector(11 downto 0) := X"002";
+constant W154  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_ASCII2BIN;
+constant W155  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_ACC & DST_A;
+constant W156  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_ACC & DST_INDX;
+constant W157  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_CONSTANT & DST_B;
+constant W158  : std_logic_vector(11 downto 0) := X"009";
+constant W159  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_CMPG;
+constant W160  : std_logic_vector(11 downto 0) :=X"0" & TYPE_2 & JMP_COND;
+constant W161  : std_logic_vector(11 downto 0) :=X"0DD";
+constant W162  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_INDXD_MEM & DST_A;
+constant W163  : std_logic_vector(11 downto 0) := X"020";
+constant W164  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_BIN2ASCII;
+constant W165  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & WR & SRC_ACC & DST_MEM;
+constant W166  : std_logic_vector(11 downto 0) := X"005";
+constant W167  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_CONSTANT & DST_ACC;
+constant W168  : std_logic_vector(11 downto 0) := X"041";
+constant W169  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & WR & SRC_ACC & DST_MEM;
+constant W170  : std_logic_vector(11 downto 0) := X"004";
+constant W171  : std_logic_vector(11 downto 0) :=X"0" & TYPE_4 & "000000";
+constant W172  : std_logic_vector(11 downto 0) :=X"0" & TYPE_2 & RETI;
+constant W173  : std_logic_vector(11 downto 0) :=X"000";
+constant W174  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_MEM & DST_A;
+constant W175  : std_logic_vector(11 downto 0) := X"002";
+constant W176  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_ASCII2BIN;
+constant W177  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_ACC & DST_A;
+constant W178  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_ACC & DST_INDX;
+constant W179  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_CONSTANT & DST_B;
+constant W180  : std_logic_vector(11 downto 0) := X"007";
+constant W181  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_CMPG;
+constant W182  : std_logic_vector(11 downto 0) :=X"0" & TYPE_2 & JMP_COND;
+constant W183  : std_logic_vector(11 downto 0) :=X"0DD";
+constant W184  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_INDXD_MEM & DST_A;
+constant W185  : std_logic_vector(11 downto 0) := X"010";
+constant W186  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_BIN2ASCII;
+constant W187  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & WR & SRC_ACC & DST_MEM;
+constant W188  : std_logic_vector(11 downto 0) := X"005";
+constant W189  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_CONSTANT & DST_ACC;
+constant W190  : std_logic_vector(11 downto 0) := X"053";
+constant W191  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & WR & SRC_ACC & DST_MEM;
+constant W192  : std_logic_vector(11 downto 0) := X"004";
+constant W193  : std_logic_vector(11 downto 0) :=X"0" & TYPE_4 & "000000";
+constant W194  : std_logic_vector(11 downto 0) :=X"0" & TYPE_2 & RETI;
+constant W195  : std_logic_vector(11 downto 0) :=X"000";
+constant W196  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_MEM & DST_A;
+constant W197  : std_logic_vector(11 downto 0) := X"031";
+constant W198  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_CONSTANT & DST_B;
+constant W199  : std_logic_vector(11 downto 0) :="000011110000";
+constant W200  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_AND;
+constant W201  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_SHIFTR;
+constant W202  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_SHIFTR;
+constant W203  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_SHIFTR;
+constant W204  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_SHIFTR;
+constant W205  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_ACC & DST_A;
+constant W206  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_BIN2ASCII;
+constant W207  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & WR & SRC_ACC & DST_MEM;
+constant W208  : std_logic_vector(11 downto 0) := X"004";
+constant W209  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_MEM & DST_A;
+constant W210  : std_logic_vector(11 downto 0) := X"031";
+constant W211  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_CONSTANT & DST_B;
+constant W212  : std_logic_vector(11 downto 0) :="000000001111";
+constant W213  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_AND;
+constant W214  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_ACC & DST_A;
+constant W215  : std_logic_vector(11 downto 0) :=X"0" & TYPE_1 & ALU_BIN2ASCII;
 constant W216  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & WR & SRC_ACC & DST_MEM;
-constant W217  : std_logic_vector(11 downto 0) := X"004";
-constant W218  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_CONSTANT & DST_ACC;
-constant W219  : std_logic_vector(11 downto 0) := X"052";
-constant W220  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & WR & SRC_ACC & DST_MEM;
-constant W221  : std_logic_vector(11 downto 0) := X"005";
-constant W222  : std_logic_vector(11 downto 0) :=X"0" & TYPE_4 & "000000";
-constant W223  : std_logic_vector(11 downto 0) :=X"0" & TYPE_2 & RETI;
-constant W224  : std_logic_vector(11 downto 0) :=X"000";
- 
- 
+constant W217  : std_logic_vector(11 downto 0) := X"005";
+constant W218  : std_logic_vector(11 downto 0) :=X"0" & TYPE_4 & "000000";
+constant W219  : std_logic_vector(11 downto 0) :=X"0" & TYPE_2 & RETI;
+constant W220  : std_logic_vector(11 downto 0) :=X"000";
+constant W221  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_CONSTANT & DST_ACC;
+constant W222  : std_logic_vector(11 downto 0) := X"045";
+constant W223  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & WR & SRC_ACC & DST_MEM;
+constant W224  : std_logic_vector(11 downto 0) := X"004";
+constant W225  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_CONSTANT & DST_ACC;
+constant W226  : std_logic_vector(11 downto 0) := X"052";
+constant W227  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & WR & SRC_ACC & DST_MEM;
+constant W228  : std_logic_vector(11 downto 0) := X"005";
+constant W229  : std_logic_vector(11 downto 0) :=X"0" & TYPE_4 & "000000";
+constant W230  : std_logic_vector(11 downto 0) :=X"0" & TYPE_2 & RETI;
+constant W231  : std_logic_vector(11 downto 0) :=X"000";
+
+
+constant W232  : std_logic_vector(11 downto 0) := X"0" & TYPE_3 & LD & SRC_MEM & DST_A;
+constant W233  : std_logic_vector(11 downto 0) := X"001";
+constant W234  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_CONSTANT & DST_B;
+constant W235  : std_logic_vector(11 downto 0) := X"053";
+constant W236  : std_logic_vector(11 downto 0) := X"0" & TYPE_1 & ALU_CMPE;
+constant W237  : std_logic_vector(11 downto 0) := X"0" & TYPE_2 & JMP_COND;
+constant W238  : std_logic_vector(11 downto 0) := X"0F1"; --Salto a la 241
+constant W239  : std_logic_vector(11 downto 0) := X"0" & TYPE_2 & JMP_UNCOND;
+constant W240  : std_logic_vector(11 downto 0) := X"0DD"; --Salto a la 215 (ER)
+constant W241  : std_logic_vector(11 downto 0) := X"0" & TYPE_3 & LD & SRC_MEM & DST_A;
+constant W242  : std_logic_vector(11 downto 0) := X"002"; 
+constant W243  : std_logic_vector(11 downto 0) :=X"0" & TYPE_3 & LD & SRC_CONSTANT & DST_B;
+constant W244  : std_logic_vector(11 downto 0) := X"054";
+constant W245  : std_logic_vector(11 downto 0) := X"0" & TYPE_1 & ALU_CMPE;
+constant W246  : std_logic_vector(11 downto 0) := X"0" & TYPE_2 & JMP_COND;
+constant W247  : std_logic_vector(11 downto 0) := X"0FA"; --Salto a 250
+constant W248  : std_logic_vector(11 downto 0) := X"0" & TYPE_2 & JMP_UNCOND;
+constant W249  : std_logic_vector(11 downto 0) := X"0DD"; --Salto a la 215 (ER)
+constant W250  : std_logic_vector(11 downto 0) := X"0" & TYPE_2 & RST; --Se ordena a la CPU hacer el reset
+constant W251  : std_logic_vector(11 downto 0) := X"0" & TYPE_2 & JMP_UNCOND;
+constant W252  : std_logic_vector(11 downto 0) := X"000"; --Por si acaso
 begin  -- AUTOMATIC
  
 with Program_counter select
@@ -258,7 +288,7 @@ with Program_counter select
 -- W4 when X"004",
 -- W5 when X"005",
 -- W6 when X"006",
-W33 when X"000",
+W40 when X"000",
 W6 when X"001", --Lo que hago así es que salte directamente a #INIT (dirección x00) continuamente
 -- W7 when X"007",
 -- W8 when X"008",
@@ -478,6 +508,34 @@ W6 when X"001", --Lo que hago así es que salte directamente a #INIT (dirección
  W222 when X"0DE",
  W223 when X"0DF",
  W224 when X"0E0",
+ W225 when X"0E1",
+ W226 when X"0E2",
+ W227 when X"0E3",
+ W228 when X"0E4",
+ W229 when X"0E5",
+ W230 when X"0E6",
+ W231 when X"0E7",
+ W232 when X"0E8",
+ W233 when X"0E9",
+ W234 when X"0EA",
+ W235 when X"0EB",
+ W236 when X"0EC",
+ W237 when X"0ED",
+ W238 when X"0EE",
+ W239 when X"0EF",
+ W240 when X"0F0",
+ W241 when X"0F1",
+ W242 when X"0F2",
+ W243 when X"0F3",
+ W244 when X"0F4",
+ W245 when X"0F5",
+ W246 when X"0F6",
+ W247 when X"0F7",
+ W248 when X"0F8",
+ W249 when X"0F9",
+ W250 when X"0FA",
+ W251 when X"0FB",
+ W252 when X"0FC",
     X"0" & TYPE_1 & ALU_ADD when others;
  
 end AUTOMATIC;

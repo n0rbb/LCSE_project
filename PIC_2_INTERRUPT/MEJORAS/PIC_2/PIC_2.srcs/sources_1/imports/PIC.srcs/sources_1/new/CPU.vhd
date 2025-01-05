@@ -26,12 +26,13 @@ entity CPU is
            FlagN : in  STD_LOGIC;
            FlagE : in  STD_LOGIC;
            INT : in STD_LOGIC;
-           INT_ACK : out STD_LOGIC);
+           INT_ACK : out STD_LOGIC;
+           CPU_Reset : out STD_LOGIC); --Señal de Reset de la CPU, comando RST
 end CPU;
 
 architecture Behavioral of CPU is
 
-		type State is (Idle, Fetch, Op_Fetch, Decode, Execute, Receive, Transmit, Interrupt);
+		type State is (Idle, Fetch, Op_Fetch, Decode, Execute, Receive, Transmit, Interrupt, Resetstate);
 
 		signal current_state, next_state: State;
 		signal PC_reg, INS_reg, TMP_reg: std_logic_vector(7 downto 0);
@@ -39,6 +40,7 @@ architecture Behavioral of CPU is
 		signal PC_reg_r, INS_reg_r, TMP_reg_r : std_logic_vector(7 downto 0); --Registros para guardar el contexto
 		
         signal INT_ACK_flag : std_logic; -- Me hago un flag secuencial para cuando se haya atendido la interrupción 
+        
 begin
 
 ROM_Addr <= "0000" & PC_reg;
@@ -58,7 +60,9 @@ begin
 		PC_reg_tmp <= PC_reg;
 		TMP_reg_tmp <= TMP_reg;
 		INT_ACK <= '0';
-
+    
+        CPU_Reset <= '1'; --Directo al puerto 
+        
 		case current_state is
 
 			when Idle =>
@@ -140,20 +144,25 @@ begin
 						case INS_reg(5 downto 0) is
 							when JMP_UNCOND =>
 								PC_reg_tmp <= TMP_reg;
+								next_state <= Idle;
 							when JMP_COND =>
 								if FlagZ='1' then
 									PC_reg_tmp <= TMP_reg;
 								end if;
+								next_state <= Idle;
 							when RETI =>  --Retorno de interrupción
 							    Alu_op <= op_loadcontext; --Aquí ordeno que la ALU recupere la info de sus registros
 							    --Recuperar el contexto CPU
 							    PC_reg_tmp <= PC_reg_r; --Aquí está el salto de vuelta atrás
 							    INS_reg_tmp <= INS_reg_r;
 							    TMP_reg_tmp <= TMP_reg_r; 
-							    
+						        next_state <= Idle;
+						    when RST =>
+						        next_state <= Resetstate;
 							when others =>
+							    next_state <= Idle;
 						end case;
-						next_state <= Idle;
+						
 
 					when TYPE_3 =>
 						if INS_reg(5)='0' then  -- Registros o lectura de memoria
@@ -288,6 +297,10 @@ begin
                     next_state <= Interrupt;
                     
                 end if;
+            
+            when Resetstate =>
+                CPU_Reset <= '0';
+                next_state <= Idle;
                 
 		end case;
 end process;
@@ -303,6 +316,7 @@ BEGIN
 		TMP_reg_r <= (others => '0');
 		
 		INT_ACK_flag <= '0';
+		--CPU_Reset <= '1';
 		
 	elsif clk'event and clk='1' then
 	    if current_state = Interrupt and INT_ACK_flag = '0' then
@@ -314,6 +328,10 @@ BEGIN
 	    else
 	       INT_ACK_flag <= '0';	         
 	    end if;
+	    
+	 --   if current_state = Resetstate then
+	 --      CPU_Reset <= '0'; --Así me dura al menos un ciclo de reloj
+	 --   end if;
 	    
         current_state <= next_state;
         PC_reg <= PC_reg_tmp;

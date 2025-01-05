@@ -13,15 +13,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
-      <ZoomEndTime time="922.417897 us"></ZoomEndTime>
-      <Cursor1Time time="109.444800 us"></Cursor1Time>
+      <ZoomStartTime time="750.000000 us"></ZoomStartTime>
+      <ZoomEndTime time="3,250.000001 us"></ZoomEndTime>
+      <Cursor1Time time="2,499.558642 us"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="243"></NameColumnWidth>
-      <ValueColumnWidth column_width="144"></ValueColumnWidth>
+      <NameColumnWidth column_width="223"></NameColumnWidth>
+      <ValueColumnWidth column_width="116"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="44" />
+   <WVObjectSize size="49" />
    <wvobject fp_name="/TB_nexys_PIC/Clk100MHz" type="logic">
       <obj_property name="ElementShortName">Clk100MHz</obj_property>
       <obj_property name="ObjectShortName">Clk100MHz</obj_property>
@@ -37,6 +37,18 @@
    <wvobject fp_name="/TB_nexys_PIC/reset" type="logic">
       <obj_property name="ElementShortName">reset</obj_property>
       <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_nexys_PIC/Unit_nexys_PIC/CPU_Reset_signal" type="logic">
+      <obj_property name="ElementShortName">CPU_Reset_signal</obj_property>
+      <obj_property name="ObjectShortName">CPU_Reset_signal</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_nexys_PIC/Unit_nexys_PIC/CPU_Reset_flag" type="logic">
+      <obj_property name="ElementShortName">CPU_Reset_flag</obj_property>
+      <obj_property name="ObjectShortName">CPU_Reset_flag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_nexys_PIC/Unit_nexys_PIC/UUT/CPU_PHY/CPU_Reset" type="logic">
+      <obj_property name="ElementShortName">CPU_Reset</obj_property>
+      <obj_property name="ObjectShortName">CPU_Reset</obj_property>
    </wvobject>
    <wvobject fp_name="/TB_nexys_PIC/SW" type="array">
       <obj_property name="ElementShortName">SW[15:0]</obj_property>
@@ -109,6 +121,15 @@
    <wvobject type="divider" fp_name="divider267">
       <obj_property name="label">Estado CPU</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_nexys_PIC/Unit_nexys_PIC/UUT/ROM_PHY/Program_counter" type="array">
+      <obj_property name="ElementShortName">Program_counter[11:0]</obj_property>
+      <obj_property name="ObjectShortName">Program_counter[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_nexys_PIC/Unit_nexys_PIC/UUT/CPU_PHY/PC_reg" type="array">
+      <obj_property name="ElementShortName">PC_reg[7:0]</obj_property>
+      <obj_property name="ObjectShortName">PC_reg[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/TB_nexys_PIC/Unit_nexys_PIC/UUT/CPU_PHY/current_state" type="other">
       <obj_property name="ElementShortName">current_state</obj_property>

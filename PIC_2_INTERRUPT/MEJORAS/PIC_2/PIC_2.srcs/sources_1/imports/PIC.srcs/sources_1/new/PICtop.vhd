@@ -23,6 +23,8 @@ entity PICtop is
     RGB_R_DUTY       : out integer;
     RGB_G_DUTY       : out integer;
     
+    CPU_Reset        : out std_logic;
+    
     StopBit     : in std_logic); --Mejora RS232 - Escoger stopbit
 end PICtop;
 
@@ -160,10 +162,14 @@ architecture behavior of PICtop is
            FlagZ        : in STD_LOGIC;
            FlagC        : in STD_LOGIC;
            FlagN        : in STD_LOGIC;
-           FlagE        : in STD_LOGIC);
+           FlagE        : in STD_LOGIC;
+           
+           CPU_Reset    : out STD_LOGIC);
            
    end component; 
- 
+    
+ --   signal CPU_Reset, IN_Reset : STD_LOGIC;
+ --   signal Reset_signal : STD_LOGIC;
   
     --RS232
     signal TX_Data      : STD_LOGIC_VECTOR (7 downto 0);    --Data_in
@@ -343,21 +349,20 @@ begin  -- behavior
         FlagZ     => FlagZ,
         FlagC     => FlagC,
         FlagN     => FlagN,
-        FlagE     => FlagE);
+        FlagE     => FlagE,
+        
+        CPU_Reset => CPU_Reset);
         
 
 ------ (1) SIGNALS USED TO GIVE CONTROL OF THE DATABUS TO THE DMA WHEN NEEDED 
-   -- process(reset, clk)
-   -- begin
-   --   if reset='0' then
-      --  DMA_ACK <= '0';
-      --  Send_comm <= '0';
-    --  elsif clk'event and clk='1' then
-    --    DMA_ACK <= DMA_RQ;
-    --    Send_comm <= i_send and (READY);
-    --  end if;
-    --end process;  
-
+--    process(clk)
+--    begin
+--      if clk'event and clk='1' then
+--        IN_Reset <= Reset;
+--        Reset_signal <= IN_Reset and CPU_Reset;
+--      end if;
+--    end process;  
+    
 ------ Lógica para acceder a Address, OE y write_en de la RAM a partir de CPU o DMA
     process(DMA_ACK, Send_comm, Address_DMA, Address_CPU, RAM_OE, RAM_WRITE, OE_DMA, Write_en_DMA)
     begin

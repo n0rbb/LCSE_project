@@ -53,6 +53,7 @@ PACKAGE PIC_pkg IS
   constant JMP_UNCOND : std_logic_vector(5 downto 0) := "00" & X"0";
   constant JMP_COND   : std_logic_vector(5 downto 0) := "00" & X"1";
   constant RETI       : std_logic_vector(5 downto 0) := "01" & X"0"; --Cuidado con el solapamiento con JMP_UNCOND
+  constant RST        : std_logic_vector(5 downto 0) := "01" & X"1";
 -------------------------------------------------------------------------------
 -- Constants to define Type 3 instructions (LOAD & STORE)
 -------------------------------------------------------------------------------

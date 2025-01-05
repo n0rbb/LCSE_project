@@ -162,6 +162,13 @@ wait for 40 us;
 Transmit(RD, X"34", StopBit);
 wait for 40 us;
 Transmit(RD, X"30", StopBit);
+wait for 500 us;
+--Transmisión del tercer comando, RST (Reset del sistema)
+Transmit(RD, X"52", StopBit);
+wait for 40 us;
+Transmit(RD, X"53", StopBit);
+wait for 40 us;
+Transmit(RD, X"54", StopBit);
 wait;
     
 END PROCESS;

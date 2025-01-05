@@ -82,6 +82,8 @@ architecture a_behavior of nexys_PIC is
         
         RGB_R_DUTY       : out integer;
         RGB_G_DUTY       : out integer;
+        
+        CPU_Reset   : out std_logic;
       
         StopBit     : in std_logic);
       end component;
@@ -90,9 +92,10 @@ architecture a_behavior of nexys_PIC is
 -- declaraci�n de se�ales 
     signal reset, reset_p : std_logic;
     signal clk : std_logic;
-    signal contador : UNSIGNED(31 downto 0); 
+    signal contador : unsigned(31 downto 0); 
     signal rgb_counter : integer;
     --signal flag : std_logic;
+    signal CPU_Reset_signal, CPU_Reset_flag : std_logic;
 
 -- signals for UUT (PICtop) 
     signal switches  : std_logic_vector(7 downto 0); 
@@ -110,7 +113,7 @@ architecture a_behavior of nexys_PIC is
 begin
 
 -- 1.Botones (y switches del 9 al 16)
-     reset <= not(BTNU);      -- Button UP     => Reset (active low)
+     reset <= not(BTNU) and CPU_Reset_signal;      -- Button UP     => Reset (active low) + Comando RST
 --     i_write_en <= BTNL;      -- Button LEFT   => Write RAM position 
 --     i_oe <= BTNR;       -- Button RIGHT  => Read RAM position
 --     i_send <= BTNC;          -- Button CENTER => Send RAM positions 4-5
@@ -168,17 +171,21 @@ begin
         
         RGB_R_DUTY      => rgb_r_duty,
         RGB_G_DUTY      => rgb_g_duty,
-       
+        
+        CPU_Reset       => CPU_Reset_flag,
+        
         StopBit => StopBit);
 
 
 -- 6.Procesos adicionales 
-    -- Contador para hacer el barrido de los datos en los displays
+    -- Contador para hacer el barrido de los datos en los displays. 
+    -- Incluyo aquí la gestión de la señal de reset por comando.
     process(reset, clk)
     begin
       if reset='0' then
 --	    i_send_r <= '0';
         contador <= (others => '0');
+        CPU_Reset_signal <= '1';
         --flag <= '0';
       elsif clk'event and clk='1' then
 --	      i_send_r <= i_send;
@@ -187,7 +194,8 @@ begin
             contador <= (others => '0');
             --flag <= not flag;
           end if; 
-      end if;
+          CPU_Reset_signal <= CPU_Reset_flag;     
+          end if;
     end process;      
 --	i_send_pulse <= i_send and not(i_send_r);
              
@@ -204,6 +212,7 @@ begin
           if rgb_counter >= 2000 then
             rgb_counter <= 0;
           end if; 
+         
       end if;
    end process contador_rgb;
    

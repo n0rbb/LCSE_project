@@ -99,3 +99,5 @@ update_compile_order -fileset sources_1
 WARNING: [Common 17-9] Error reading message records.
 WARNING: [Common 17-9] Error reading message records.
 WARNING: [Common 17-9] Error reading message records.
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Jan  5 14:49:36 2025...
