@@ -41,8 +41,8 @@ entity DMA is
       INT : out std_logic;
       INT_ACK : in std_logic;
       
-      RGB_R : out std_logic;
-      RGB_G : out std_logic;
+      RGB_R_DUTY : out integer;
+      RGB_G_DUTY : out integer;
 
       TX_Data : out std_logic_vector(7 downto 0);
       Address : out std_logic_vector(7 downto 0);
@@ -270,8 +270,8 @@ begin
          ByteCounterTX <= 0;
          ByteCounterRX <= 0;
          TX_Data <= (others => '0');
-         RGB_R <= '0';
-         RGB_G <= '0';
+         RGB_R_DUTY <= 0;
+         RGB_G_DUTY <= 0;
         -- DataBuffer <= (others => 'Z');
          current_state <= idle;
         
@@ -307,11 +307,11 @@ begin
             when load_transmitter =>
                TX_Data <= DataBus;
                if DataBus = X"45" or DataBus = X"52" then --ER
-                    RGB_G <= '0';
-                    RGB_R <= '1';
+                    RGB_G_DUTY <= 0;
+                    RGB_R_DUTY <= 200;  --pongo el duty al 10% (T = 2000 ciclos)
                else --No hay error, ;) o info del actuador)
-                    RGB_G <= '1';
-                    RGB_R <= '0';
+                    RGB_G_DUTY <= 200;
+                    RGB_R_DUTY <= 0;
                end if;
             --   ByteCounterTX <= ByteCounterTX;
             --   ByteCounterRX <= ByteCounterRX;

@@ -20,8 +20,8 @@ entity PICtop is
     Temp_L      : out std_logic_vector(6 downto 0);   -- Display value for TL
     Temp_H      : out std_logic_vector(6 downto 0);  -- Display value for TH
     
-    RGB_R       : out std_logic;
-    RGB_G       : out std_logic;
+    RGB_R_DUTY       : out integer;
+    RGB_G_DUTY       : out integer;
     
     StopBit     : in std_logic); --Mejora RS232 - Escoger stopbit
 end PICtop;
@@ -108,8 +108,8 @@ architecture behavior of PICtop is
            INT          : out STD_LOGIC;
            INT_ACK      : in STD_LOGIC; -- Esto me va a sacar las interrupciones
            
-           RGB_R        : out STD_LOGIC;
-           RGB_G        : out STD_LOGIC); 
+           RGB_R_DUTY        : out integer;
+           RGB_G_DUTY        : out integer); 
   end component;
   
   component ROM is
@@ -295,8 +295,8 @@ begin  -- behavior
         INT => INT, 
         INT_ACK => INT_ACK, 
         
-        RGB_R => RGB_R,
-        RGB_G => RGB_G);
+        RGB_R_DUTY => RGB_R_DUTY,
+        RGB_G_DUTY => RGB_G_DUTY);
       
     ROM_PHY: ROM
      port map(

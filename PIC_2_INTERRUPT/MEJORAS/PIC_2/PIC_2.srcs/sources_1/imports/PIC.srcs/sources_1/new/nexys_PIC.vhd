@@ -80,8 +80,8 @@ architecture a_behavior of nexys_PIC is
         Temp_L      : out std_logic_vector(6 downto 0);   -- Display value for TL
         Temp_H      : out std_logic_vector(6 downto 0);  -- Display value for TH
         
-        RGB_R       : out std_logic;
-        RGB_G       : out std_logic;
+        RGB_R_DUTY       : out integer;
+        RGB_G_DUTY       : out integer;
       
         StopBit     : in std_logic);
       end component;
@@ -91,11 +91,13 @@ architecture a_behavior of nexys_PIC is
     signal reset, reset_p : std_logic;
     signal clk : std_logic;
     signal contador : UNSIGNED(31 downto 0); 
+    signal rgb_counter : integer;
     --signal flag : std_logic;
 
 -- signals for UUT (PICtop) 
     signal switches  : std_logic_vector(7 downto 0); 
-    signal rgb_r_signal, rgb_g_signal : std_logic;
+   -- signal rgb_r_signal, rgb_g_signal : std_logic; Obsoleto
+    signal rgb_r_duty, rgb_g_duty: integer;
     signal RD, TD  : std_logic;  
     signal Temp_H, Temp_L     : std_logic_vector(6 downto 0);
     
@@ -119,8 +121,8 @@ begin
 --     LED(7 downto 0) <= i_data_out;    -- Lower LED byte => Show the data written to/read from the RAM 
 --     i_data_in <= SW(7 downto 0);      -- Lower  SW byte => Data to be written to the RAM
 --     i_address <= SW(15 downto 8);     -- Upper  SW byte => RAM read/write address 
-     LED16_R <= rgb_r_signal;
-     LED16_G <= rgb_g_signal;
+     LED16_R <= '1' when rgb_counter < rgb_r_duty else '0';
+     LED16_G <= '1' when rgb_counter < rgb_g_duty else '0';
 -- 3a.Realimentaci�n lineas TD => RD  (necesita un cable entre los pines 1 y 2 del pmodJA)
 --     JA(1) <= TD;   -- OUTPUT PORT     
 --    JA(2) <= 'Z';   -- OUTPUT PORT
@@ -164,8 +166,8 @@ begin
         Temp_L     => Temp_L,
         Temp_H     => Temp_H, 
         
-        RGB_R      => rgb_r_signal,
-        RGB_G      => rgb_g_signal,
+        RGB_R_DUTY      => rgb_r_duty,
+        RGB_G_DUTY      => rgb_g_duty,
        
         StopBit => StopBit);
 
@@ -191,6 +193,21 @@ begin
              
 			  
 --7.Otros procesos
+--Pongo por ejemplo, freq pwm a 10 kHz (periodo de 2000)
+   contador_rgb : process(reset, clk) 
+   begin
+      if reset='0' then	  
+        rgb_counter <= 0;
+        
+      elsif clk'event and clk='1' then  
+          rgb_counter <= rgb_counter + 1;
+          if rgb_counter >= 2000 then
+            rgb_counter <= 0;
+          end if; 
+      end if;
+   end process contador_rgb;
+   
+   
     -- Entrega (write) / Captura y almacena (read) los datos del databus
 --    process(reset, clk)
 --    begin
