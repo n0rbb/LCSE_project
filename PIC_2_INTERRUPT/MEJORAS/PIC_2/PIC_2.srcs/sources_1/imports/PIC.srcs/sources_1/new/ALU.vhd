@@ -217,14 +217,15 @@ begin
         FlagE_r <= FlagE_i;
       end if;
     end if;
-  end process secuencial;
   
-  --Pasamos las señales intermedias a las salidas del bloque.
+    
+  end process secuencial;
   Index_Reg <= Index_Reg_i;
   FlagZ     <= FlagZ_i;
   FlagC     <= FlagC_i;
   FlagN     <= FlagN_i;
   FlagE     <= FlagE_i; 
+  
   
 end Behavioral;
 

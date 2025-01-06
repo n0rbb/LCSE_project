@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="TB_nexys_PIC_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="TB_nexys_PIC" />
+            <top_module name="glbl" />
+            <top_module name="pic_pkg" />
+            <top_module name="rs232_test" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
+      <ZoomEndTime time="2,286.399303 us"></ZoomEndTime>
+      <Cursor1Time time="50.130776 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="191"></NameColumnWidth>
+      <ValueColumnWidth column_width="116"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="37" />
+   <wvobject type="divider" fp_name="divider48">
+      <obj_property name="label">Nexys</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_nexys_PIC/Clk100MHz" type="logic">
+      <obj_property name="ElementShortName">Clk100MHz</obj_property>
+      <obj_property name="ObjectShortName">Clk100MHz</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_nexys_PIC/Unit_nexys_PIC/clk_20MHz/clk_out1" type="logic">
+      <obj_property name="ElementShortName">clk_out1</obj_property>
+      <obj_property name="ObjectShortName">clk_out1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_nexys_PIC/Unit_nexys_PIC/UUT/CPU_PHY/CPU_Reset" type="logic">
+      <obj_property name="ElementShortName">CPU_Reset</obj_property>
+      <obj_property name="ObjectShortName">CPU_Reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_nexys_PIC/Unit_nexys_PIC/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_nexys_PIC/SW[15]" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">[15]</obj_property>
+      <obj_property name="ObjectShortName">[15]</obj_property>
+      <obj_property name="label">SW[15] (StpB)</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_nexys_PIC/LED[12]" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">[12]</obj_property>
+      <obj_property name="ObjectShortName">[12]</obj_property>
+      <obj_property name="label">LED[12]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_nexys_PIC/UART_RXD_OUT" type="logic">
+      <obj_property name="ElementShortName">UART_RXD_OUT</obj_property>
+      <obj_property name="ObjectShortName">UART_RXD_OUT</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_nexys_PIC/UART_TXD_IN" type="logic">
+      <obj_property name="ElementShortName">UART_TXD_IN</obj_property>
+      <obj_property name="ObjectShortName">UART_TXD_IN</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider124">
+      <obj_property name="label">UUT</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_nexys_PIC/Unit_nexys_PIC/UUT/databus" type="array">
+      <obj_property name="ElementShortName">databus[7:0]</obj_property>
+      <obj_property name="ObjectShortName">databus[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider267">
+      <obj_property name="label">Estado CPU</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_nexys_PIC/Unit_nexys_PIC/UUT/CPU_PHY/PC_reg" type="array">
+      <obj_property name="ElementShortName">PC_reg[7:0]</obj_property>
+      <obj_property name="ObjectShortName">PC_reg[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#808000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_nexys_PIC/Unit_nexys_PIC/UUT/CPU_PHY/current_state" type="other">
+      <obj_property name="ElementShortName">current_state</obj_property>
+      <obj_property name="ObjectShortName">current_state</obj_property>
+      <obj_property name="CustomSignalColor">#808000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_nexys_PIC/Unit_nexys_PIC/UUT/Send_comm" type="logic">
+      <obj_property name="ElementShortName">Send_comm</obj_property>
+      <obj_property name="ObjectShortName">Send_comm</obj_property>
+      <obj_property name="CustomSignalColor">#808000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_nexys_PIC/Unit_nexys_PIC/UUT/DMA_PHY/DMA_Ack" type="logic">
+      <obj_property name="ElementShortName">DMA_Ack</obj_property>
+      <obj_property name="ObjectShortName">DMA_Ack</obj_property>
+      <obj_property name="CustomSignalColor">#808000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_nexys_PIC/Unit_nexys_PIC/UUT/DMA_PHY/INT_ACK" type="logic">
+      <obj_property name="ElementShortName">INT_ACK</obj_property>
+      <obj_property name="ObjectShortName">INT_ACK</obj_property>
+      <obj_property name="CustomSignalColor">#808000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="group454" type="group">
+      <obj_property name="label">Registros CPU</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/TB_nexys_PIC/Unit_nexys_PIC/UUT/CPU_PHY/PC_reg_r" type="array">
+         <obj_property name="ElementShortName">PC_reg_r[7:0]</obj_property>
+         <obj_property name="ObjectShortName">PC_reg_r[7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#808000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_nexys_PIC/Unit_nexys_PIC/UUT/CPU_PHY/INS_reg_r" type="array">
+         <obj_property name="ElementShortName">INS_reg_r[7:0]</obj_property>
+         <obj_property name="ObjectShortName">INS_reg_r[7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#808000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_nexys_PIC/Unit_nexys_PIC/UUT/CPU_PHY/TMP_reg_r" type="array">
+         <obj_property name="ElementShortName">TMP_reg_r[7:0]</obj_property>
+         <obj_property name="ObjectShortName">TMP_reg_r[7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#808000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider268">
+      <obj_property name="label">Estado DMA</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_nexys_PIC/Unit_nexys_PIC/UUT/DMA_PHY/current_state" type="other">
+      <obj_property name="ElementShortName">current_state</obj_property>
+      <obj_property name="ObjectShortName">current_state</obj_property>
+      <obj_property name="CustomSignalColor">#A52A2A</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_nexys_PIC/Unit_nexys_PIC/UUT/DMA_PHY/DMA_RQ" type="logic">
+      <obj_property name="ElementShortName">DMA_RQ</obj_property>
+      <obj_property name="ObjectShortName">DMA_RQ</obj_property>
+      <obj_property name="CustomSignalColor">#A52A2A</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_nexys_PIC/Unit_nexys_PIC/UUT/DMA_PHY/INT" type="logic">
+      <obj_property name="ElementShortName">INT</obj_property>
+      <obj_property name="ObjectShortName">INT</obj_property>
+      <obj_property name="CustomSignalColor">#A52A2A</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_nexys_PIC/Unit_nexys_PIC/UUT/DMA_PHY/RX_Empty" type="logic">
+      <obj_property name="ElementShortName">RX_Empty</obj_property>
+      <obj_property name="ObjectShortName">RX_Empty</obj_property>
+      <obj_property name="CustomSignalColor">#A52A2A</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_nexys_PIC/Unit_nexys_PIC/UUT/DMA_PHY/ByteCounterTX" type="other">
+      <obj_property name="ElementShortName">ByteCounterTX</obj_property>
+      <obj_property name="ObjectShortName">ByteCounterTX</obj_property>
+      <obj_property name="CustomSignalColor">#A52A2A</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_nexys_PIC/Unit_nexys_PIC/UUT/DMA_PHY/ByteCounterRX" type="other">
+      <obj_property name="ElementShortName">ByteCounterRX</obj_property>
+      <obj_property name="ObjectShortName">ByteCounterRX</obj_property>
+      <obj_property name="CustomSignalColor">#A52A2A</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider133">
+      <obj_property name="label">RAM</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_nexys_PIC/Unit_nexys_PIC/UUT/RAM_PHY/address" type="array">
+      <obj_property name="ElementShortName">address[7:0]</obj_property>
+      <obj_property name="ObjectShortName">address[7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#808080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_nexys_PIC/Unit_nexys_PIC/UUT/RAM_PHY/write_en" type="logic">
+      <obj_property name="ElementShortName">write_en</obj_property>
+      <obj_property name="ObjectShortName">write_en</obj_property>
+      <obj_property name="CustomSignalColor">#808080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_nexys_PIC/Unit_nexys_PIC/UUT/RAM_PHY/oe" type="logic">
+      <obj_property name="ElementShortName">oe</obj_property>
+      <obj_property name="ObjectShortName">oe</obj_property>
+      <obj_property name="CustomSignalColor">#808080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider115">
+      <obj_property name="label">ALU</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_nexys_PIC/Unit_nexys_PIC/UUT/ALU_PHY/ALU_op" type="other">
+      <obj_property name="ElementShortName">ALU_op</obj_property>
+      <obj_property name="ObjectShortName">ALU_op</obj_property>
+      <obj_property name="CustomSignalColor">#008080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="group332" type="group">
+      <obj_property name="label">Registros ALU</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/TB_nexys_PIC/Unit_nexys_PIC/UUT/ALU_PHY/FlagZ_r" type="logic">
+         <obj_property name="ElementShortName">FlagZ_r</obj_property>
+         <obj_property name="ObjectShortName">FlagZ_r</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_nexys_PIC/Unit_nexys_PIC/UUT/ALU_PHY/FlagC_r" type="logic">
+         <obj_property name="ElementShortName">FlagC_r</obj_property>
+         <obj_property name="ObjectShortName">FlagC_r</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_nexys_PIC/Unit_nexys_PIC/UUT/ALU_PHY/FlagN_r" type="logic">
+         <obj_property name="ElementShortName">FlagN_r</obj_property>
+         <obj_property name="ObjectShortName">FlagN_r</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_nexys_PIC/Unit_nexys_PIC/UUT/ALU_PHY/FlagE_r" type="logic">
+         <obj_property name="ElementShortName">FlagE_r</obj_property>
+         <obj_property name="ObjectShortName">FlagE_r</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_nexys_PIC/Unit_nexys_PIC/UUT/ALU_PHY/ACC_r" type="array">
+         <obj_property name="ElementShortName">ACC_r[7:0]</obj_property>
+         <obj_property name="ObjectShortName">ACC_r[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_nexys_PIC/Unit_nexys_PIC/UUT/ALU_PHY/B_r" type="array">
+         <obj_property name="ElementShortName">B_r[7:0]</obj_property>
+         <obj_property name="ObjectShortName">B_r[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_nexys_PIC/Unit_nexys_PIC/UUT/ALU_PHY/A_r" type="array">
+         <obj_property name="ElementShortName">A_r[7:0]</obj_property>
+         <obj_property name="ObjectShortName">A_r[7:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider71">
+      <obj_property name="label">RS232</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_nexys_PIC/Unit_nexys_PIC/UUT/RS232_PHY/Transmitter/tx" type="logic">
+      <obj_property name="ElementShortName">tx</obj_property>
+      <obj_property name="ObjectShortName">tx</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_nexys_PIC/Unit_nexys_PIC/UUT/RS232_PHY/Transmitter/current_state" type="other">
+      <obj_property name="ElementShortName">current_state</obj_property>
+      <obj_property name="ObjectShortName">current_state</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_nexys_PIC/Unit_nexys_PIC/UUT/Valid_D" type="logic">
+      <obj_property name="ElementShortName">Valid_D</obj_property>
+      <obj_property name="ObjectShortName">Valid_D</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_nexys_PIC/Unit_nexys_PIC/UUT/TX_RDY" type="logic">
+      <obj_property name="ElementShortName">TX_RDY</obj_property>
+      <obj_property name="ObjectShortName">TX_RDY</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+</wave_config>

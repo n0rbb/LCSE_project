@@ -162,31 +162,31 @@ begin
     CA <= not(temp_H_picked(0)) when selectdisp = "10" else 
           not(temp_L_picked(0)) when selectdisp = "00" else
           not(degree(0)) when selectdisp = "01" else
-          not(measure(0)) when selectdisp = "11";
+          not(measure(0));
     CB <= not(temp_H_picked(1)) when selectdisp = "10" else 
           not(temp_L_picked(1)) when selectdisp = "00" else
           not(degree(1)) when selectdisp = "01" else
-          not(measure(1)) when selectdisp = "11";
+          not(measure(1));
     CC <= not(temp_H_picked(2)) when selectdisp = "10" else 
           not(temp_L_picked(2)) when selectdisp = "00" else
           not(degree(2)) when selectdisp = "01" else
-          not(measure(2)) when selectdisp = "11";
+          not(measure(2));
     CD <= not(temp_H_picked(3)) when selectdisp = "10" else 
           not(temp_L_picked(3)) when selectdisp = "00" else
           not(degree(3)) when selectdisp = "01" else
-          not(measure(3)) when selectdisp = "11";
+          not(measure(3));
     CE <= not(temp_H_picked(4)) when selectdisp = "10" else 
           not(temp_L_picked(4)) when selectdisp = "00" else
           not(degree(4)) when selectdisp = "01" else
-          not(measure(4)) when selectdisp = "11";
+          not(measure(4));
     CF <= not(temp_H_picked(5)) when selectdisp = "10" else 
           not(temp_L_picked(5)) when selectdisp = "00" else
           not(degree(5)) when selectdisp = "01" else
-          not(measure(5)) when selectdisp = "11";
+          not(measure(5));
     CG <= not(temp_H_picked(6)) when selectdisp = "10" else 
           not(temp_L_picked(6)) when selectdisp = "00" else
           not(degree(6)) when selectdisp = "01" else
-          not(measure(6)) when selectdisp = "11";
+          not(measure(6));
     
     DP <= '0' when (selectdisp = "00") else '1';
     AN <= "1111" & 

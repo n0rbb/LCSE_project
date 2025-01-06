@@ -104,8 +104,8 @@ Unit_nexys_PIC :  nexys_PIC
 
 -- Reset generation (active low)
 reset <= '1', '0' after 75 ns, '1' after 175 ns;
-
-StopBit <= '0', '1' after 700 us;
+StopBit <= '1';
+--StopBit <= '0', '1' after 700 us;
 
 -- Clock generation (100 MHz)
 CLK100MHz <= Clk;

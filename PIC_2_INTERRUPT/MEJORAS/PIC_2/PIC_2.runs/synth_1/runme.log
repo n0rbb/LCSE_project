@@ -8,12 +8,12 @@
   **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
   **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
   **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-  **** Start of session at: Mon Jan  6 00:32:38 2025
+  **** Start of session at: Mon Jan  6 19:57:30 2025
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source nexys_PIC.tcl -notrace
-create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 550.812 ; gain = 238.953
+create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 551.051 ; gain = 239.379
 Command: read_checkpoint -auto_incremental -incremental C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.srcs/utils_1/imports/synth_1/nexys_PIC.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.srcs/utils_1/imports/synth_1/nexys_PIC.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -27,13 +27,13 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 3120
+INFO: [Synth 8-7075] Helper process launched with PID 17748
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1429.496 ; gain = 449.293
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1428.312 ; gain = 448.777
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'nexys_PIC' [C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.srcs/sources_1/imports/PIC.srcs/sources_1/new/nexys_PIC.vhd:55]
-INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.runs/synth_1/.Xil/Vivado-2656-DESKTOP-NDA5VSL/realtime/clk_wiz_0_stub.vhdl:6' bound to instance 'clk_20MHz' of component 'clk_wiz_0' [C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.srcs/sources_1/imports/PIC.srcs/sources_1/new/nexys_PIC.vhd:201]
-INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.runs/synth_1/.Xil/Vivado-2656-DESKTOP-NDA5VSL/realtime/clk_wiz_0_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.runs/synth_1/.Xil/Vivado-4700-DESKTOP-NDA5VSL/realtime/clk_wiz_0_stub.vhdl:6' bound to instance 'clk_20MHz' of component 'clk_wiz_0' [C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.srcs/sources_1/imports/PIC.srcs/sources_1/new/nexys_PIC.vhd:201]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.runs/synth_1/.Xil/Vivado-4700-DESKTOP-NDA5VSL/realtime/clk_wiz_0_stub.vhdl:16]
 INFO: [Synth 8-3491] module 'PICtop' declared at 'C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.srcs/sources_1/imports/PIC.srcs/sources_1/new/PICtop.vhd:6' bound to instance 'UUT' of component 'PICtop' [C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.srcs/sources_1/imports/PIC.srcs/sources_1/new/nexys_PIC.vhd:207]
 INFO: [Synth 8-638] synthesizing module 'PICtop' [C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.srcs/sources_1/imports/PIC.srcs/sources_1/new/PICtop.vhd:34]
 INFO: [Synth 8-3491] module 'RS232_top' declared at 'C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.srcs/sources_1/imports/PIC.srcs/sources_1/new/RS232_top.vhd:6' bound to instance 'RS232_PHY' of component 'RS232_top' [C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.srcs/sources_1/imports/PIC.srcs/sources_1/new/PICtop.vhd:247]
@@ -47,8 +47,8 @@ INFO: [Synth 8-256] done synthesizing module 'rrx' (0#1) [C:/Users/worbb/Desktop
 INFO: [Synth 8-3491] module 'shiftregister' declared at 'C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.srcs/sources_1/imports/PIC.srcs/sources_1/new/ShiftRegister.vhd:5' bound to instance 'Shift' of component 'ShiftRegister' [C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.srcs/sources_1/imports/PIC.srcs/sources_1/new/RS232_top.vhd:120]
 INFO: [Synth 8-638] synthesizing module 'shiftregister' [C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.srcs/sources_1/imports/PIC.srcs/sources_1/new/ShiftRegister.vhd:14]
 INFO: [Synth 8-256] done synthesizing module 'shiftregister' (0#1) [C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.srcs/sources_1/imports/PIC.srcs/sources_1/new/ShiftRegister.vhd:14]
-INFO: [Synth 8-3491] module 'fifo' declared at 'C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.runs/synth_1/.Xil/Vivado-2656-DESKTOP-NDA5VSL/realtime/fifo_stub.vhdl:6' bound to instance 'Internal_memory' of component 'fifo' [C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.srcs/sources_1/imports/PIC.srcs/sources_1/new/RS232_top.vhd:130]
-INFO: [Synth 8-638] synthesizing module 'fifo' [C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.runs/synth_1/.Xil/Vivado-2656-DESKTOP-NDA5VSL/realtime/fifo_stub.vhdl:20]
+INFO: [Synth 8-3491] module 'fifo' declared at 'C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.runs/synth_1/.Xil/Vivado-4700-DESKTOP-NDA5VSL/realtime/fifo_stub.vhdl:6' bound to instance 'Internal_memory' of component 'fifo' [C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.srcs/sources_1/imports/PIC.srcs/sources_1/new/RS232_top.vhd:130]
+INFO: [Synth 8-638] synthesizing module 'fifo' [C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.runs/synth_1/.Xil/Vivado-4700-DESKTOP-NDA5VSL/realtime/fifo_stub.vhdl:20]
 INFO: [Synth 8-256] done synthesizing module 'RS232_top' (0#1) [C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.srcs/sources_1/imports/PIC.srcs/sources_1/new/RS232_top.vhd:28]
 INFO: [Synth 8-3491] module 'RAM_top' declared at 'C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.srcs/sources_1/imports/PIC.srcs/sources_1/new/RAM_top.vhd:7' bound to instance 'RAM_PHY' of component 'RAM_top' [C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.srcs/sources_1/imports/PIC.srcs/sources_1/new/PICtop.vhd:266]
 INFO: [Synth 8-638] synthesizing module 'RAM_top' [C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.srcs/sources_1/imports/PIC.srcs/sources_1/new/RAM_top.vhd:24]
@@ -110,18 +110,18 @@ WARNING: [Synth 8-7129] Port SW[2] in module nexys_PIC is either unconnected or 
 WARNING: [Synth 8-7129] Port SW[1] in module nexys_PIC is either unconnected or has no load
 WARNING: [Synth 8-7129] Port SW[0] in module nexys_PIC is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1565.434 ; gain = 585.230
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1565.316 ; gain = 585.781
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1565.434 ; gain = 585.230
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1565.316 ; gain = 585.781
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1565.434 ; gain = 585.230
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1565.316 ; gain = 585.781
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 1565.434 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 1565.316 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -136,22 +136,22 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/nexys_PIC_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1662.672 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1662.879 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1662.672 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1662.879 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1662.672 ; gain = 682.469
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1662.879 ; gain = 683.344
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1662.672 ; gain = 682.469
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1662.879 ; gain = 683.344
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -161,7 +161,7 @@ Applied set_property CLOCK_BUFFER_TYPE = NONE for CLK100MHZ. (constraint file  c
 Applied set_property KEEP_HIERARCHY = SOFT for UUT/RS232_PHY/Internal_memory. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for clk_20MHz. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1662.672 ; gain = 682.469
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1662.879 ; gain = 683.344
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'trx'
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'rrx'
@@ -212,15 +212,8 @@ INFO: [Synth 8-6159] Found Keep on FSM register 'current_state_reg' in module 'D
                 transmit |                             1000 |                             0110
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'CPU'
-WARNING: [Synth 8-327] inferring latch for variable 'CA_reg' [C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.srcs/sources_1/imports/PIC.srcs/sources_1/new/nexys_PIC.vhd:162]
-WARNING: [Synth 8-327] inferring latch for variable 'CB_reg' [C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.srcs/sources_1/imports/PIC.srcs/sources_1/new/nexys_PIC.vhd:166]
-WARNING: [Synth 8-327] inferring latch for variable 'CC_reg' [C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.srcs/sources_1/imports/PIC.srcs/sources_1/new/nexys_PIC.vhd:170]
-WARNING: [Synth 8-327] inferring latch for variable 'CD_reg' [C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.srcs/sources_1/imports/PIC.srcs/sources_1/new/nexys_PIC.vhd:174]
-WARNING: [Synth 8-327] inferring latch for variable 'CE_reg' [C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.srcs/sources_1/imports/PIC.srcs/sources_1/new/nexys_PIC.vhd:178]
-WARNING: [Synth 8-327] inferring latch for variable 'CF_reg' [C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.srcs/sources_1/imports/PIC.srcs/sources_1/new/nexys_PIC.vhd:182]
-WARNING: [Synth 8-327] inferring latch for variable 'CG_reg' [C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.srcs/sources_1/imports/PIC.srcs/sources_1/new/nexys_PIC.vhd:186]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1662.672 ; gain = 682.469
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1662.879 ; gain = 683.344
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -267,14 +260,13 @@ Detailed RTL Component Info :
 	   3 Input    3 Bit        Muxes := 1     
 	   4 Input    2 Bit        Muxes := 1     
 	   2 Input    2 Bit        Muxes := 5     
-	   4 Input    1 Bit        Muxes := 10    
+	   4 Input    1 Bit        Muxes := 16    
 	   2 Input    1 Bit        Muxes := 25    
 	   8 Input    1 Bit        Muxes := 10    
 	  25 Input    1 Bit        Muxes := 6     
 	  24 Input    1 Bit        Muxes := 1     
 	  16 Input    1 Bit        Muxes := 3     
 	   9 Input    1 Bit        Muxes := 7     
-	   3 Input    1 Bit        Muxes := 7     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -326,7 +318,7 @@ WARNING: [Synth 8-7129] Port SW[2] in module nexys_PIC is either unconnected or 
 WARNING: [Synth 8-7129] Port SW[1] in module nexys_PIC is either unconnected or has no load
 WARNING: [Synth 8-7129] Port SW[0] in module nexys_PIC is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 1662.672 ; gain = 682.469
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 1662.879 ; gain = 683.344
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -355,13 +347,13 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:42 ; elapsed = 00:00:45 . Memory (MB): peak = 1662.672 ; gain = 682.469
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:46 ; elapsed = 00:00:47 . Memory (MB): peak = 1662.879 ; gain = 683.344
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 1662.672 ; gain = 682.469
+Finished Timing Optimization : Time (s): cpu = 00:00:49 ; elapsed = 00:00:50 . Memory (MB): peak = 1662.879 ; gain = 683.344
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -381,7 +373,7 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 1662.672 ; gain = 682.469
+Finished Technology Mapping : Time (s): cpu = 00:00:51 ; elapsed = 00:00:52 . Memory (MB): peak = 1662.879 ; gain = 683.344
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -399,37 +391,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:53 ; elapsed = 00:00:56 . Memory (MB): peak = 1662.672 ; gain = 682.469
+Finished IO Insertion : Time (s): cpu = 00:00:57 ; elapsed = 00:00:58 . Memory (MB): peak = 1662.879 ; gain = 683.344
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:53 ; elapsed = 00:00:56 . Memory (MB): peak = 1662.672 ; gain = 682.469
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:57 ; elapsed = 00:00:58 . Memory (MB): peak = 1662.879 ; gain = 683.344
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:54 ; elapsed = 00:00:57 . Memory (MB): peak = 1662.672 ; gain = 682.469
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:58 ; elapsed = 00:00:59 . Memory (MB): peak = 1662.879 ; gain = 683.344
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:54 ; elapsed = 00:00:57 . Memory (MB): peak = 1662.672 ; gain = 682.469
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:58 ; elapsed = 00:00:59 . Memory (MB): peak = 1662.879 ; gain = 683.344
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:54 ; elapsed = 00:00:57 . Memory (MB): peak = 1662.672 ; gain = 682.469
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:58 ; elapsed = 00:00:59 . Memory (MB): peak = 1662.879 ; gain = 683.344
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:54 ; elapsed = 00:00:57 . Memory (MB): peak = 1662.672 ; gain = 682.469
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:58 ; elapsed = 00:00:59 . Memory (MB): peak = 1662.879 ; gain = 683.344
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -452,10 +444,10 @@ Report Cell Usage:
 |3     |CARRY4         |   275|
 |4     |LUT1           |    24|
 |5     |LUT2           |   390|
-|6     |LUT3           |   340|
-|7     |LUT4           |   736|
-|8     |LUT5           |   289|
-|9     |LUT6           |   800|
+|6     |LUT3           |   343|
+|7     |LUT4           |   735|
+|8     |LUT5           |   287|
+|9     |LUT6           |   798|
 |10    |MUXF7          |    80|
 |11    |MUXF8          |    40|
 |12    |RAM128X1S      |     8|
@@ -463,38 +455,36 @@ Report Cell Usage:
 |14    |FDCE           |   611|
 |15    |FDPE           |     7|
 |16    |FDRE           |   209|
-|17    |LDC            |     5|
-|18    |LDP            |     3|
-|19    |IBUF           |     4|
-|20    |OBUF           |    27|
-|21    |OBUFT          |     8|
+|17    |LDC            |     1|
+|18    |IBUF           |     4|
+|19    |OBUF           |    27|
+|20    |OBUFT          |     8|
 +------+---------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:54 ; elapsed = 00:00:57 . Memory (MB): peak = 1662.672 ; gain = 682.469
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:58 ; elapsed = 00:00:59 . Memory (MB): peak = 1662.879 ; gain = 683.344
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 42 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:43 ; elapsed = 00:00:54 . Memory (MB): peak = 1662.672 ; gain = 585.230
-Synthesis Optimization Complete : Time (s): cpu = 00:00:54 ; elapsed = 00:00:57 . Memory (MB): peak = 1662.672 ; gain = 682.469
+Synthesis finished with 0 errors, 0 critical warnings and 35 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:45 ; elapsed = 00:00:56 . Memory (MB): peak = 1662.879 ; gain = 585.781
+Synthesis Optimization Complete : Time (s): cpu = 00:00:58 ; elapsed = 00:00:59 . Memory (MB): peak = 1662.879 ; gain = 683.344
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.067 . Memory (MB): peak = 1662.672 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 419 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.068 . Memory (MB): peak = 1662.879 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 412 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1662.672 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1662.879 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 24 instances were transformed.
-  LDC => LDCE: 5 instances
-  LDP => LDPE: 3 instances
+  A total of 17 instances were transformed.
+  LDC => LDCE: 1 instance 
   RAM128X1S => RAM128X1S (MUXF7, RAMS64E(x2)): 8 instances
   RAM64X1S => RAM64X1S (RAMS64E): 8 instances
 
-Synth Design complete | Checksum: b727b2d9
+Synth Design complete | Checksum: 93799118
 INFO: [Common 17-83] Releasing license: Synthesis
-74 Infos, 76 Warnings, 0 Critical Warnings and 0 Errors encountered.
+74 Infos, 69 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:02 ; elapsed = 00:01:15 . Memory (MB): peak = 1662.672 ; gain = 1098.578
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1662.672 ; gain = 0.000
+synth_design: Time (s): cpu = 00:01:05 ; elapsed = 00:01:07 . Memory (MB): peak = 1662.879 ; gain = 1098.809
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1662.879 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/worbb/Desktop/Electronics/LCSE/PIC_2/PIC_2.runs/synth_1/nexys_PIC.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file nexys_PIC_utilization_synth.rpt -pb nexys_PIC_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Jan  6 00:34:15 2025...
+INFO: [Common 17-206] Exiting Vivado at Mon Jan  6 19:58:52 2025...
